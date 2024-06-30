@@ -1,0 +1,98 @@
+body {
+    background-color: #322C2B;
+    margin: 0;
+}
+.TitleCreations {
+    font-family: 'Grape Nuts';
+    color: #E4C59E;
+    font-size: 55px;
+    margin: 0;
+    margin-left: 0.4%;
+    margin-top: 1%;
+    text-shadow: 0px 4px 10px black
+}
+.item1, .item2 {
+    background-color: #803D3B;
+    display: flex;
+    margin-right: 15%;
+    margin-top: 2%;
+    margin-left: 0.4%;
+    margin-bottom: 1%;
+}
+.pic1, .pic2 {
+    width: 21%; /* Make images take up the full width of their container */
+    height: 17%;
+    border-style: solid;
+    border-color: #E4C59E;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.textfield1, .textfield2 {
+    /* background-color: rgb(30, 32, 32); */
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+}
+.text1, .text2 {
+    font-family: 'Grape Nuts';
+    color: #E4C59E;
+    font-size: 25px;
+    width: 81%;
+}
+.quantity1, .quantity2 {
+    display: flex;
+    margin-bottom: 1%;
+}
+.quantity1text, .quantity2text {
+    font-family: 'Grape Nuts';
+    color: #E4C59E;
+    font-size: 25px;
+    align-self: flex-end;
+}
+
+@media only screen and (max-width: 1024px) {
+    .TitleCreations {
+        font-size: 32px; /* Adjust font size */
+        margin-top: 20px; /* Add top margin */
+        margin-left: 5%;
+        margin-bottom: 2%;
+    }
+    .item1, .item2 {
+        flex-direction: column; /* Stack items vertically on mobile */
+        margin-right: 5%; /* Remove right margin */
+        margin-left: 5%; /* Remove left margin */
+        margin-bottom: 3%;
+    }
+    .pic1, .pic2 {
+        width: 48%; /* Reduce width for better fit */
+        height: auto; /* Maintain aspect ratio */
+        margin-left: 1%; /* Center image */
+    }
+    .textfield1, .textfield2 {
+        width: 100%; /* Full width */
+        flex-direction: row; /* Stack text vertically */
+        align-items: right; /* Center align text */
+        margin-left: 1%; /* Remove left margin */
+        display: flex;
+        justify-content: space-between;
+    }
+    .text1, .text2 {
+        font-size: 15px;
+        width: 50%;
+    }
+    .quantity1, .quantity2 {
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center align */
+    }
+    .quantity1text, .quantity2text {
+        font-size: 16px;
+        align-self: flex-end;
+        margin-bottom: 1%;
+        margin-right: 3%;
+    }
+    .item1{
+        margin-top: 4%;
+    }
+}

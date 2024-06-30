@@ -1,0 +1,105 @@
+body {
+    background-color: #322C2B;
+    margin: 0;
+}
+.CreationsButton, .OrderButton, .AboutButton {
+    background-color: #803D3B;
+    border-radius: 25px;
+    height: 80px;
+    flex: 1; /* Makes each button take up an equal amount of space */
+    font-size: 30px;
+    cursor: pointer;
+    color: #E4C59E;
+    font-family: 'Grape Nuts';
+    margin: 0 10px; /* Adds horizontal margin for visual spacing */
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
+}
+.pic1, .pic2, .pic3, .pic4{
+    width: 100%; /* Make images take up the full width of their container */
+    height: 85%; /* Maintain aspect ratio */
+    border-style: solid;
+    border-color: #E4C59E;
+    border-right: 0;
+    border-left: 0;
+    border-width: 0.3cm;
+    vertical-align: top;
+    margin-top: 2%; /* Remove top margin */
+    padding-left: 0;
+    padding-right: 0;
+}
+.Title {
+    font-family: 'Grape Nuts';
+    color: #E4C59E;
+    font-size: 55px;
+    margin: 0;
+    margin-left: 0.4%;
+    margin-top: 1%;
+    text-shadow: 0px 4px 10px black
+}
+.images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 0; /* No space between the images */
+    padding: 0; /* No padding around the grid container */
+    margin-left: 0.4%;
+    margin-right: 0.4%;
+    margin-top: 3%;
+}
+.homeButtons {
+    display: flex;
+    justify-content: space-between; /* Evenly spaces out the buttons */
+    margin: 1.5% 11.2%; /* Adjust margin to center the buttons container */
+    margin-top: 3%;
+}
+.OrderButton {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+.AboutButton {
+    margin-left: 4%;
+}
+.CreationsButton {
+    margin-right: 4%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .homeButtons {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+        margin: 20px 0; /* Adjust vertical margin */
+    }
+    .CreationsButton, .OrderButton, .AboutButton {
+        height: auto; /* Adjust button height as needed */
+        margin: 10px 0; /* Add vertical margin */
+        width: 80%; /* Adjust width */
+        font-size: 24px; /* Adjust font size */
+        text-align: center; /* Center align text */
+        max-width: 50%;
+    }
+    .Title {
+        font-size: 32px; /* Adjust font size */
+        margin-top: 20px; /* Add top margin */
+        margin-left: 5%;
+    }
+    .images {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for images */
+        margin-top: 20px; /* Adjust top margin */
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .pic1, .pic2, .pic3, .pic4 {
+        height: auto; /* Adjust image height */
+        margin-top: 20px; /* Adjust margin */
+        height: 80%;
+    }
+
+    .pic1, .pic2 {
+        border-bottom: 0;
+        margin-bottom: -13%;
+    }
+
+    .pic3, .pic4 {
+        border-top: 0;
+        margin-top: -13%;
+    }
+}
