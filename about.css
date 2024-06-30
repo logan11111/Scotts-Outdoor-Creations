@@ -11,3 +11,79 @@ body {
     margin-top: 1%;
     text-shadow: 0px 4px 10px black;
 }
+
+.introduction {
+    background-color: #803D3B;
+    display: flex;
+    margin-right: 15%;
+    margin-top: 2%;
+    margin-left: 0.4%;
+    margin-bottom: 1%;
+    display: flex;
+}
+
+.introImage {
+    width: 21%; /* Make images take up the full width of their container */
+    height: 17%;
+    border-style: solid;
+    border-color: #E4C59E;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.introText {
+    font-family: 'Grape Nuts';
+    color: #E4C59E;
+    font-size: 25px;
+    width: 81%;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.FAQ {
+    background-color: #803D3B;
+    display: flex;
+    margin-right: 15%;
+    margin-top: 2%;
+    margin-left: 0.4%;
+    margin-bottom: 1%;
+    display: flex;
+}
+
+.faqHead {
+    font-family: 'Grape Nuts';
+    color: #E4C59E;
+    font-size: 55px;
+    margin: 0;
+    margin-left: 0.4%;
+    text-shadow: 0px 4px 10px black;
+    margin-top: 2%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .TitleAbout, .faqHead {
+        font-size: 32px; /* Adjust font size */
+        margin-top: 20px; /* Add top margin */
+        margin-left: 5%;
+        margin-bottom: 2%;
+    }
+
+    .introduction {
+        flex-direction: column; /* Stack items vertically on mobile */
+        margin-right: 5%; /* Remove right margin */
+        margin-left: 5%; /* Remove left margin */
+        margin-bottom: 3%;
+    }
+
+    .introImage {
+        width: 48%; /* Reduce width for better fit */
+        height: auto; /* Maintain aspect ratio */
+        margin-left: 1%; /* Center image */
+    }
+
+    .introText {
+        font-size: 16px;
+    }
+}
