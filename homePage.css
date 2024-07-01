@@ -15,7 +15,12 @@ body {
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
     -webkit-tap-highlight-color: transparent;
 }
-
+.CreationsButton:hover, .OrderButton:hover, .AboutButton:hover {
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
+}
+.CreationsButton:active, .OrderButton:active, .AboutButton:active {
+    background-color: #792422;
+}
 .pic1, .pic2, .pic3, .pic4{
     width: 100%; /* Make images take up the full width of their container */
     height: 85%; /* Maintain aspect ratio */

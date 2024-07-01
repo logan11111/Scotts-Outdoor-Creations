@@ -1,0 +1,22 @@
+body {
+    background-color: #322C2B;
+    margin: 0;
+}
+.TitleOrder {
+    font-family: 'Grape Nuts';
+    color: #E4C59E;
+    font-size: 55px;
+    margin: 0;
+    margin-left: 0.4%;
+    margin-top: 1%;
+    text-shadow: 0px 4px 10px black;
+}
+.explanation {
+    background-color: #803D3B;
+    display: flex;
+    margin-right: 15%;
+    margin-top: 2%;
+    margin-left: 0.4%;
+    margin-bottom: 1%;
+    display: flex;
+}
