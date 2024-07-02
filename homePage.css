@@ -73,7 +73,8 @@ body {
     .homeButtons {
         flex-direction: column; /* Stack buttons vertically */
         align-items: center; /* Center align buttons */
-        margin: 20px 0; /* Adjust vertical margin */
+        margin-top: 7%; /* Adjust vertical margin */
+        margin-bottom: 3%;
     }
     .CreationsButton, .OrderButton, .AboutButton {
         height: auto; /* Adjust button height as needed */
@@ -81,7 +82,7 @@ body {
         width: 80%; /* Adjust width */
         font-size: 24px; /* Adjust font size */
         text-align: center; /* Center align text */
-        max-width: 50%;
+        max-width: 70%;
     }
     .Title {
         font-size: 32px; /* Adjust font size */
@@ -96,19 +97,19 @@ body {
     }
     .pic1, .pic2, .pic3, .pic4 {
         height: auto; /* Adjust image height */
-        margin-top: 20px; /* Adjust margin */
-        height: 80%;
+        height: 100%;
     }
 
     .pic1, .pic2 {
         border-bottom: 0;
-        margin-bottom: -13%;
+
+        margin-top: 20px; /* Adjust margin */
     }
     .CreationsButton:hover, .OrderButton:hover, .AboutButton:hover {
         box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
     }
     .pic3, .pic4 {
         border-top: 0;
-        margin-top: -13%;
+
     }
 }

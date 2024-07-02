@@ -11,7 +11,7 @@ body {
     margin-top: 1%;
     text-shadow: 0px 4px 10px black;
 }
-.explanation {
+.explanation, .orderForm {
     background-color: #803D3B;
     display: flex;
     margin-right: 15%;
@@ -63,7 +63,7 @@ body {
         margin-left: 5%;
         margin-bottom: 4%;
     }
-    .explanation {
+    .explanation, .orderForm {
         flex-direction: column; /* Stack items vertically on mobile */
         margin-right: 5%; /* Remove right margin */
         margin-left: 5%; /* Remove left margin */
