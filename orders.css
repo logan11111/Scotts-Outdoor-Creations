@@ -47,6 +47,28 @@ body {
 .homeButton:active {
     background-color: #792422;
 }
+.orderForm{
+    display: flex;
+    flex-direction: column;
+}
+.itemButton, .quantityButton, .colorButton, .firstButton, .lastButton, .emailButton {
+    width: 45%;
+    margin: 1% 0 1% 1%; 
+    margin-left: auto; /* This aligns the buttons to the right edge of the container */
+    margin-right: 25%;
+}
+.itemSelection, .quantitySelection, .colorSelection, .firstSelection, .lastSelection, .emailSelection {
+    width: 100%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    display: flex;
+}
+.itemSelectionText, .quantitySelectionText, .colorSelectionText, .firstSelectionText, .lastSelectionText, .emailSelectionText {
+    font-family: 'Grape Nuts';
+    color: #E4C59E;
+    font-size: 25px;
+    margin-left: 2%;
+}
 
 @media only screen and (max-width: 1024px) {
     .homeButton {
@@ -71,5 +93,17 @@ body {
     }
     .introParagraph {
         font-size: 16px;
+    }
+    .itemSelectionText, .quantitySelectionText, .colorSelectionText, .firstSelectionText, .lastSelectionText, .emailSelectionText {
+        font-family: 'Grape Nuts';
+        color: #E4C59E;
+        font-size: 16px;
+        margin-left: 2%;
+    }
+    .itemButton, .quantityButton, .colorButton, .firstButton, .lastButton, .emailButton {
+        width: 45%;
+        margin: 1% 0 1% 1%; 
+        margin-left: auto; /* This aligns the buttons to the right edge of the container */
+        margin-right: 8%;
     }
 }
