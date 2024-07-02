@@ -20,3 +20,30 @@ body {
     margin-bottom: 1%;
     display: flex;
 }
+.introParagraph {
+    font-family: 'Grape Nuts';
+    color: #E4C59E;
+    font-size: 25px;
+    width: 81%;
+    margin-left: 2%;
+}
+.homeButton {
+    position: absolute;
+    top: 2.5%;
+    right: 15%;
+    background-color: #803D3B;
+    padding: 1% 1.5% 1% 1.5%;
+    border-radius: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #E4C59E;
+    font-family: 'Grape Nuts';
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
+    -webkit-tap-highlight-color: transparent;
+}
+.homeButton:hover {
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
+}
+.homeButton:active {
+    background-color: #792422;
+}
