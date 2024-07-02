@@ -47,3 +47,29 @@ body {
 .homeButton:active {
     background-color: #792422;
 }
+
+@media only screen and (max-width: 1024px) {
+    .homeButton {
+        right: 5%;
+        top: 25px;
+        font-size: 15px;
+    }
+    .homeButton:hover {
+        box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
+    }
+    .TitleOrder {
+        font-size: 32px; /* Adjust font size */
+        margin-top: 20px; /* Add top margin */
+        margin-left: 5%;
+        margin-bottom: 4%;
+    }
+    .explanation {
+        flex-direction: column; /* Stack items vertically on mobile */
+        margin-right: 5%; /* Remove right margin */
+        margin-left: 5%; /* Remove left margin */
+        margin-bottom: 3%;
+    }
+    .introParagraph {
+        font-size: 16px;
+    }
+}
