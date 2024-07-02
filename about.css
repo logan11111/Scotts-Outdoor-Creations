@@ -90,7 +90,7 @@ body {
     }
 
     .introduction {
-        flex-direction: column; /* Stack items vertically on mobile */
+        flex-direction: row; /* Stack items vertically on mobile */
         margin-right: 5%; /* Remove right margin */
         margin-left: 5%; /* Remove left margin */
         margin-bottom: 3%;
@@ -100,10 +100,11 @@ body {
         width: 48%; /* Reduce width for better fit */
         height: auto; /* Maintain aspect ratio */
         margin-left: 1%; /* Center image */
+        max-height: 500px;
     }
 
     .introText {
-        font-size: 16px;
+        font-size: 14px;
     }
     .homeButton {
         right: 5%;
