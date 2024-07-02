@@ -34,24 +34,22 @@ body {
     margin-top: 1%;
     margin-bottom: 1%;
     display: flex;
+    flex-direction: column;
 }
 .text1, .text2 {
     font-family: 'Grape Nuts';
     color: #E4C59E;
     font-size: 25px;
     width: 81%;
-}
-.quantity1, .quantity2 {
-    display: flex;
-    margin-bottom: 1%;
-}
-.quantity1text, .quantity2text {
-    font-family: 'Grape Nuts';
-    color: #E4C59E;
-    font-size: 25px;
-    align-self: flex-end;
+    margin-top: 0;
 }
 
+.itemName1, .itemName2{
+    font-family: 'Grape Nuts';
+    color: #E4C59E; 
+    margin: 1% 2% 1% 0%;
+    font-size: 45px;
+}
 .homeButton {
     position: absolute;
     top: 2.5%;
@@ -81,7 +79,7 @@ body {
         margin-bottom: 2%;
     }
     .item1, .item2 {
-        flex-direction: column; /* Stack items vertically on mobile */
+        flex-direction: row; /* Stack items vertically on mobile */
         margin-right: 5%; /* Remove right margin */
         margin-left: 5%; /* Remove left margin */
         margin-bottom: 3%;
@@ -93,27 +91,25 @@ body {
     }
     .textfield1, .textfield2 {
         width: 100%; /* Full width */
-        flex-direction: row; /* Stack text vertically */
+        flex-direction: column; /* Stack text vertically */
         align-items: right; /* Center align text */
         margin-left: 1%; /* Remove left margin */
         display: flex;
-        justify-content: space-between;
     }
     .text1, .text2 {
         font-size: 15px;
-        width: 50%;
+        width: 100%;
+        margin-top: 1%;
     }
     .quantity1, .quantity2 {
         flex-direction: column; /* Stack vertically */
         align-items: center; /* Center align */
     }
-    .quantity1text, .quantity2text {
-        font-size: 16px;
-        align-self: flex-end;
-        margin-bottom: 1%;
-        margin-right: 3%;
+    .itemName1, .itemName2{
+        margin: 1% 2% 1% 0%;
+        font-size: 20px;
     }
-    .item1{
+    .item1, .item2{
         margin-top: 4%;
     }
     .homeButton {
