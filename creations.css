@@ -61,7 +61,7 @@ body {
     cursor: pointer;
     color: #E4C59E;
     font-family: 'Grape Nuts';
-    box-shadow: 0 6px 10px 0 rgb(48, 46, 46), 0 3px 10px 0 black;
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
     -webkit-tap-highlight-color: transparent;
 }
 .homeButton:hover {
