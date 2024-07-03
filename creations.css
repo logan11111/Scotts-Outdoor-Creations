@@ -11,7 +11,7 @@ body {
     margin-top: 1%;
     text-shadow: 0px 4px 10px black;
 }
-.item1, .item2 {
+.item {
     background-color: #803D3B;
     display: flex;
     margin-right: 15%;
@@ -19,7 +19,7 @@ body {
     margin-left: 0.4%;
     margin-bottom: 1%;
 }
-.pic1, .pic2 {
+.pic {
     width: 21%; /* Make images take up the full width of their container */
     height: 17%;
     border-style: solid;
@@ -28,7 +28,7 @@ body {
     margin-top: 1%;
     margin-bottom: 1%;
 }
-.textfield1, .textfield2 {
+.textfield {
     /* background-color: rgb(30, 32, 32); */
     margin-left: 2%;
     margin-top: 1%;
@@ -36,7 +36,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-.text1, .text2 {
+.text {
     font-family: 'Grape Nuts';
     color: #E4C59E;
     font-size: 25px;
@@ -44,7 +44,7 @@ body {
     margin-top: 0;
 }
 
-.itemName1, .itemName2{
+.itemName {
     font-family: 'Grape Nuts';
     color: #E4C59E; 
     margin: 1% 2% 1% 0%;
@@ -78,38 +78,34 @@ body {
         margin-left: 5%;
         margin-bottom: 2%;
     }
-    .item1, .item2 {
+    .item {
         flex-direction: row; /* Stack items vertically on mobile */
         margin-right: 5%; /* Remove right margin */
         margin-left: 5%; /* Remove left margin */
         margin-bottom: 3%;
     }
-    .pic1, .pic2 {
+    .pic {
         width: 48%; /* Reduce width for better fit */
         height: auto; /* Maintain aspect ratio */
         margin-left: 1%; /* Center image */
     }
-    .textfield1, .textfield2 {
+    .textfield {
         width: 100%; /* Full width */
         flex-direction: column; /* Stack text vertically */
         align-items: right; /* Center align text */
         margin-left: 1%; /* Remove left margin */
         display: flex;
     }
-    .text1, .text2 {
+    .text {
         font-size: 15px;
         width: 100%;
         margin-top: 1%;
     }
-    .quantity1, .quantity2 {
-        flex-direction: column; /* Stack vertically */
-        align-items: center; /* Center align */
-    }
-    .itemName1, .itemName2{
+    .itemName {
         margin: 1% 2% 1% 0%;
         font-size: 20px;
     }
-    .item1, .item2{
+    .item {
         margin-top: 4%;
     }
     .homeButton {
