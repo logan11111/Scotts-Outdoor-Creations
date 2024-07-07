@@ -2,6 +2,25 @@ body {
     background-color: #322C2B;
     margin: 0;
 }
+.orderButton {
+    font-family: 'Grape Nuts';
+    margin-top: 5%;
+    width: 25%;
+    height: 20%;
+    box-shadow: inset;
+    align-self: center;
+    margin-left: 25%;
+    background-color: #AF8260;
+    cursor: pointer;
+    border-radius: 60%;
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}
+.orderButton:hover {
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
+}
 .TitleCreations {
     font-family: 'Grape Nuts';
     color: #E4C59E;
@@ -14,10 +33,17 @@ body {
 .item {
     background-color: #803D3B;
     display: flex;
-    margin-right: 15%;
+    margin-right: 10%;
     margin-top: 2%;
     margin-left: 0.4%;
     margin-bottom: 1%;
+    border-radius: 42%;
+    border: 2px solid #E4C59E;
+    box-shadow: 4px 4px 10px black;
+}
+.fullItem {
+    display: flex;
+    flex-direction: row;
 }
 .pic {
     width: 21%; /* Make images take up the full width of their container */
@@ -27,7 +53,9 @@ body {
     margin-left: 1%;
     margin-top: 1%;
     margin-bottom: 1%;
-    /* border-radius: 40%; */
+    margin-right: 1%;
+    border-radius: 40%; 
+    box-shadow: 4px 4px 10px black;
 }
 .textfield {
     /* background-color: rgb(30, 32, 32); */
@@ -43,18 +71,21 @@ body {
     font-size: 25px;
     width: 81%;
     margin-top: 0;
+    margin-left: 10%;
+    text-shadow: 4px 4px 4px black;
 }
 
 .itemName {
     font-family: 'Grape Nuts';
     color: #E4C59E; 
-    margin: 1% 2% 1% 0%;
+    margin: 1% 2% 1% 25%;
     font-size: 45px;
+    text-shadow: 4px 4px 4px black;
 }
 .homeButton {
     position: absolute;
     top: 2.5%;
-    right: 15%;
+    right: 10%;
     background-color: #803D3B;
     padding: 1% 1.5% 1% 1.5%;
     border-radius: 7px;
@@ -64,6 +95,7 @@ body {
     font-family: 'Grape Nuts';
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
     -webkit-tap-highlight-color: transparent;
+    text-shadow: 4px 4px 4px black;
 }
 .homeButton:hover {
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
