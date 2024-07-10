@@ -112,19 +112,23 @@ body {
         font-size: 32px; /* Adjust font size */
         margin-top: 20px; /* Add top margin */
         margin-left: 5%;
-        margin-bottom: 2%;
+        margin-bottom: 4%;
     }
     .item {
         flex-direction: row; /* Stack items vertically on mobile */
         margin-right: 5%; /* Remove right margin */
         margin-left: 5%; /* Remove left margin */
         margin-bottom: 3%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
     .pic {
-        width: 65%; /* Reduce width for better fit */
-        height: 75%; /* Maintain aspect ratio */
+        width: 88%; /* Reduce width for better fit */
+        height: 50%; /* Maintain aspect ratio */
         margin-left: 1%; /* Center image */
         align-self: center;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
     .textfield {
         width: 100%; /* Full width */
