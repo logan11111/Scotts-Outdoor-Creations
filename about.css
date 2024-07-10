@@ -90,17 +90,18 @@ body {
     }
 
     .introduction {
-        flex-direction: row; /* Stack items vertically on mobile */
+        flex-direction: column; /* Stack items vertically on mobile */
         margin-right: 5%; /* Remove right margin */
         margin-left: 5%; /* Remove left margin */
         margin-bottom: 3%;
     }
 
     .introImage {
-        width: 48%; /* Reduce width for better fit */
+        width: 60%; /* Reduce width for better fit */
         height: auto; /* Maintain aspect ratio */
-        margin-left: 1%; /* Center image */
         max-height: 500px;
+        margin-top: 2%;
+        align-self: center;
     }
 
     .introText {
