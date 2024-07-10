@@ -4,12 +4,11 @@ body {
 }
 .orderButton {
     font-family: 'Grape Nuts';
-    margin-top: 5%;
     width: 25%;
-    height: 20%;
+    height: 15%;
+    margin-top: 2%;
     box-shadow: inset;
     align-self: center;
-    margin-left: 25%;
     background-color: #AF8260;
     cursor: pointer;
     border-radius: 60%;
@@ -78,7 +77,7 @@ body {
 .itemName {
     font-family: 'Grape Nuts';
     color: #E4C59E; 
-    margin: 1% 2% 1% 25%;
+    align-self: center;
     font-size: 45px;
     text-shadow: 4px 4px 4px black;
 }
@@ -105,6 +104,10 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
+
+    .fullItem {
+        flex-direction: column;
+    }
     .TitleCreations {
         font-size: 32px; /* Adjust font size */
         margin-top: 20px; /* Add top margin */
@@ -118,9 +121,10 @@ body {
         margin-bottom: 3%;
     }
     .pic {
-        width: 48%; /* Reduce width for better fit */
-        height: auto; /* Maintain aspect ratio */
+        width: 65%; /* Reduce width for better fit */
+        height: 75%; /* Maintain aspect ratio */
         margin-left: 1%; /* Center image */
+        align-self: center;
     }
     .textfield {
         width: 100%; /* Full width */
@@ -131,8 +135,10 @@ body {
     }
     .text {
         font-size: 15px;
-        width: 100%;
-        margin-top: 1%;
+        width: 75%;
+        margin-top: 3%;
+        margin-right: 5%;
+        align-self: center;
     }
     .itemName {
         margin: 1% 2% 1% 0%;
@@ -147,6 +153,19 @@ body {
         font-size: 15px;
     }
     .homeButton:hover {
+        box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
+    }
+    .orderButton {
+        font-family: 'Grape Nuts';
+        width: 40%;
+        height: 50%;
+        margin-top: 2%;
+        box-shadow: inset;
+        align-self: center;
+        font-size: 15px;
+        margin-bottom: 4%;
+    }
+    .orderButton:hover {
         box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
     }
 }
