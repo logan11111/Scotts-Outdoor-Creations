@@ -45,8 +45,9 @@ body {
     flex-direction: row;
 }
 .pic {
-    width: 21%; /* Make images take up the full width of their container */
-    height: 17%;
+    width: 22%; /* Make images take up the full width of their container */
+    height: 70%;
+    align-self: center;
     border-style: solid;
     border-color: #E4C59E;
     margin-left: 1%;
@@ -123,7 +124,7 @@ body {
         border-top-right-radius: 0;
     }
     .pic {
-        width: 88%; /* Reduce width for better fit */
+        width: 89.5%; /* Reduce width for better fit */
         height: 50%; /* Maintain aspect ratio */
         margin-left: 1%; /* Center image */
         align-self: center;
