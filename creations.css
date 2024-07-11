@@ -113,7 +113,7 @@ body {
         font-size: 30px; /* Adjust font size */
         margin-top: 20px; /* Add top margin */
         margin-left: 5%;
-        margin-bottom: 4%;
+        margin-bottom: 7%;
     }
     .item {
         flex-direction: row; /* Stack items vertically on mobile */
@@ -122,15 +122,17 @@ body {
         margin-bottom: 3%;
         border-radius: 0;
         padding-bottom: 2%;
-        width: 70%;
+        width: 80%;
+        max-width: 600px;
         align-self: center;
     }
     .pic {
-        width: 70%; /* Reduce width for better fit */ /* Maintain aspect ratio */
+        width: 80%; /* Reduce width for better fit */ /* Maintain aspect ratio */
         margin-left: 1%; /* Center image */
         align-self: center;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+        max-width: 600px;
     }
     .textfield {
         width: 100%; /* Full width */
@@ -154,7 +156,7 @@ body {
         margin-top: 4%;
     }
     .homeButton {
-        right: 5%;
+        right: 2%;
         top: 25px;
         font-size: 15px;
     }
