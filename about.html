@@ -19,13 +19,34 @@
                 <br>
                 <br>
                 Thanks again,
+                <br>
                 Scott Hepfner
                 </p>
         </div>
         </div>
         <h1 class="faqHead">FAQ'S</h1>
         <div class="FAQ"> 
-        </div>
+            <div class="Question">
+                <button class="questionButton">Question 1</button>
+                <div class="dropdown">
+                    <button class="answer">FINALLY</button>
+                </div>
+            </div>
+            <div class="Question">
+                <button class="questionButton">Question 1</button>
+            </div>
+            <div class="Question">
+                <button class="questionButton">Question 2</button>
+            </div>
+            <div class="Question">
+                <button class="questionButton">Question 3</button>
+            </div>
+        </div> 
         <button class="homeButton" onclick="location.href='index.html'">&#8656; HOME</button>
+        <script>
+            document.querySelector('.questionButton').addEventListener('click', function() {
+                document.querySelector('.dropdown').classList.toggle('active');
+            });
+        </script>
     </body>
 </html>
