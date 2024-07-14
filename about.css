@@ -89,11 +89,13 @@ body {
 .questionButton {
     width: 100%;
     align-self: center;
+    background-color: #AF8260;
 }
 
 .Question {
     margin-top: 2%;
     width: 90%;
+    background-color: #AF8260;
 }
 
 .faqHead {
@@ -107,13 +109,11 @@ body {
 }
 .dropdown {
     display: none;
-    position: absolute;
     background-color: #f1f1f1;
 }
 .dropdown.active {
     display: block;
 }
-
 
 @media only screen and (max-width: 1024px) {
     .TitleAbout, .faqHead {
