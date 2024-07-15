@@ -11,21 +11,44 @@ body {
     margin-top: 1%;
     text-shadow: 0px 4px 10px black;
 }
-.explanation, .orderForm {
+
+.pic {
+    max-width: 100px;
+    max-height: 150px;
+}
+.pic:hover{
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
+}
+.pic:active {
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 pink;
+}
+
+.explanation, .orderForm, .endingInfo {
     background-color: #803D3B;
     display: flex;
-    margin-right: 15%;
+    margin-right: 10%;
     margin-top: 2%;
     margin-left: 0.4%;
-    margin-bottom: 1%;
-    display: flex;
+    margin-bottom: 2%;
+    border: 2px solid #E4C59E;
+    box-shadow: 4px 4px 10px black;
+}
+.endingInfo {
+    flex-direction: column;
+}
+.explanation{
+    justify-content: center;
+}
+.explanation {
+    border-radius: 30% 30% 0 0;
 }
 .introParagraph {
     font-family: 'Grape Nuts';
     color: #E4C59E;
     font-size: 25px;
-    width: 81%;
-    margin-left: 2%;
+    align-self: center;
+    width: 80%;
+    padding-top: 1%;
 }
 .homeButton {
     position: absolute;
@@ -51,23 +74,36 @@ body {
     display: flex;
     flex-direction: column;
 }
-.itemButton, .quantityButton, .colorButton, .firstButton, .lastButton, .emailButton {
+.itemButton, .quantityButton {
     width: 45%;
     margin: 1% 0 1% 1%; 
     margin-left: auto; /* This aligns the buttons to the right edge of the container */
     margin-right: 25%;
 }
-.itemSelection, .quantitySelection, .colorSelection, .firstSelection, .lastSelection, .emailSelection {
+.selection {
     width: 100%;
     margin-bottom: 1%;
     margin-top: 1%;
     display: flex;
 }
-.itemSelectionText, .quantitySelectionText, .colorSelectionText, .firstSelectionText, .lastSelectionText, .emailSelectionText {
+.selectionText, .selectionTextBottom {
     font-family: 'Grape Nuts';
     color: #E4C59E;
     font-size: 25px;
     margin-left: 2%;
+    margin-right: 2%;
+}
+.addButton, .placeButton {
+    font-family: 'Grape Nuts';
+    color: #E4C59E;
+    font-size: 25px;
+    background-color: #803D3B;
+    border-color: #E4C59E;
+    margin: 0% 0 0% .4%;
+}
+
+.placeButton{
+    margin-bottom: 4%;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -85,25 +121,36 @@ body {
         margin-left: 5%;
         margin-bottom: 4%;
     }
-    .explanation, .orderForm {
+    .explanation, .orderForm, .endingInfo {
         flex-direction: column; /* Stack items vertically on mobile */
         margin-right: 5%; /* Remove right margin */
         margin-left: 5%; /* Remove left margin */
         margin-bottom: 3%;
+        margin-top: 3%;
+    }
+    .explanation {
+        border-radius: 25% 25% 0 0;
+        padding-top: 2%;
     }
     .introParagraph {
         font-size: 16px;
+        margin-left: 1%;
     }
-    .itemSelectionText, .quantitySelectionText, .colorSelectionText, .firstSelectionText, .lastSelectionText, .emailSelectionText {
+    .selectionText, .selectionTextBottom {
         font-family: 'Grape Nuts';
         color: #E4C59E;
         font-size: 16px;
         margin-left: 2%;
     }
-    .itemButton, .quantityButton, .colorButton, .firstButton, .lastButton, .emailButton {
+    .itemButton, .quantityButton {
         width: 45%;
         margin: 1% 0 1% 1%; 
         margin-left: auto; /* This aligns the buttons to the right edge of the container */
         margin-right: 8%;
+    }
+    .addButton, .placeButton{
+        font-size: 16px;
+        margin-left: 5%;
+        margin-top: 0%;
     }
 }
