@@ -28,22 +28,79 @@
         <h1 class="faqHead">FAQ'S</h1>
         <div class="FAQ"> 
             <div class="Question">
-                <button class="questionButton">Can you customize the size of the 3 tier planters?</button>
+                <button class="questionButton">Q: Can you customize the size of the 3 tier planters? &#x21d3;</button>
                 <div class="dropdown">
-                    <button class="answer">FINALLY</button>
+                    <p class="answerText">A: Yes, I will build to suit your needs</p>
                 </div>
             </div>
             <div class="Question">
-                <button class="questionButton">Question 2</button>
+                <button class="questionButton">Q: What methods of payment do you accept? &#x21d3;</button>
+                <div class="dropdown">
+                    <p class="answerText">A: Yes, I will build to suit your needs</p>
+                </div>
             </div>
             <div class="Question">
-                <button class="questionButton">Question 3</button>
+                <button class="questionButton">Q: How does the payment and pick-up work? &#x21d3;</button>
+                <div class="dropdown">
+                    <p class="answerText">A: You put 50% down when you order, and pay the remainder upon pick up of your order.</p>
+                </div>
+            </div>
+            <div class="Question">
+                <button class="questionButton">Q: Do you deliver? &#x21d3;</button>
+                <div class="dropdown">
+                    <p class="answerText">A: I offer pick up only, but can provide delivery if you don't have any means to pick up. This will be an additional charge.</p>
+                </div>
+            </div>
+            <div class="Question">
+                <button class="questionButton">Q: Do you provide warranty on your work? &#x21d3;</button>
+                <div class="dropdown">
+                    <p class="answerText">A: Yes, I will provide a one year warranty from the date of pick up on any defects. Damage caused by vandalism or misuse will not be covered. The product(s) will have to be brought to me for servicing/repair.</p>
+                </div>
+            </div>
+            <div class="Question">
+                <button class="questionButton">Q: What kind of lumber do you use? &#x21d3;</button>
+                <div class="dropdown">
+                    <p class="answerText">A: I use construction grade lumber from my local box store. If a specific type of lumber is requested, it would be based on availability and the cost would increase depending on that material.</p>
+                </div>
+            </div>
+            <div class="Question">
+                <button class="questionButton">Q: How long will it take to build my order? &#x21d3;</button>
+                <div class="dropdown">
+                    <p class="answerText">A: I am the sole builder for all wood works, so the time frame will depend on overall demand at the time as well as the size of the order. I will be transparent about timing when order is decided upon.</p>
+                </div>
+            </div>
+            <div class="Question">
+                <button class="questionButton">Q: Do you just make this furniture in the summer months or throughout the year? &#x21d3;</button>
+                <div class="dropdown">
+                    <p class="answerText">A: I typically focus on the work throughout the Spring, Summer and Fall, based on demand in those seasons, but will accept requests in Winter if needed.</p>
+                </div>
+            </div>
+            <div class="Question">
+                <button class="questionButton">Q: Can I pre-order a planter or chair for Spring? &#x21d3;</button>
+                <div class="dropdown">
+                    <p class="answerText">A: Yes, this would actually help me plan and have these ready to go before demand is too high.</p>
+                </div>
+            </div>
+            <div class="Question">
+                <button class="questionButton">Q: Can I view or try the furniture before I order it? &#x21d3;</button>
+                <div class="dropdown">
+                    <p class="answerText">A: Yes, I will have a sample of each piece created for you to view or try before ordering/purchasing.</p>
+                </div>
             </div>
         </div> 
         <button class="homeButton" onclick="location.href='index.html'">&#8656; HOME</button>
         <script>
-            document.querySelector('.questionButton').addEventListener('click', function() {
-                document.querySelector('.dropdown').classList.toggle('active');
+            // Select all question buttons
+            const questionButtons = document.querySelectorAll('.questionButton');
+        
+            // Loop through each button and add a click event listener
+            questionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Find the next sibling element with the class 'dropdown'
+                    const dropdown = this.nextElementSibling;
+                    // Toggle the 'active' class on the dropdown
+                    dropdown.classList.toggle('active');
+                });
             });
         </script>
     </body>

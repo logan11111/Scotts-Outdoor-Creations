@@ -84,12 +84,18 @@ body {
     margin-bottom: 1%;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2%;
 }
 
 .questionButton {
     width: 100%;
     align-self: center;
     background-color: #AF8260;
+    font-family: 'Grape Nuts';
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .Question {
@@ -109,10 +115,20 @@ body {
 }
 .dropdown {
     display: none;
-    background-color: #f1f1f1;
+    background-color: #AF8260;
+    align-content: center;
+    justify-content: center;
 }
 .dropdown.active {
-    display: block;
+    display: flex;
+}
+.answerText {
+    font-family: 'Grape Nuts';
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 1%;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -153,6 +169,7 @@ body {
         margin: 0 auto; /* Centers the element horizontally */
         display: flex; /* Adds flexbox display */
         justify-content: center; /* Centers content inside the .FAQ div */
+        padding-bottom: 4%;
     }
 
     .introText {
@@ -167,5 +184,11 @@ body {
     }
     .homeButton:hover {
         box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
+    }
+    .questionButton{
+        font-size: 14px;
+    }
+    .answerText {
+        font-size: 14px;
     }
 }
