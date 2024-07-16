@@ -90,12 +90,12 @@ body {
 .questionButton {
     width: 100%;
     align-self: center;
-    background-color: #AF8260;
     font-family: 'Grape Nuts';
     font-size: 24px;
     color: black;
     cursor: pointer;
     font-weight: bold;
+    background-color: #AF8260;
 }
 
 .Question {
@@ -115,7 +115,7 @@ body {
 }
 .dropdown {
     display: none;
-    background-color: #AF8260;
+    background-color: #E4C59E;
     align-content: center;
     justify-content: center;
 }
