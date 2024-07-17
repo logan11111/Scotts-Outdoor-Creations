@@ -96,6 +96,7 @@ body {
     cursor: pointer;
     font-weight: bold;
     background-color: #AF8260;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .Question {
