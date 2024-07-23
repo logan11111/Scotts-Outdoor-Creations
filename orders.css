@@ -20,6 +20,12 @@ body {
     border-width: 10px;
     margin-right: 2%;
     align-items: flex-start;
+    border-radius: 5px;
+}
+.selected {
+    background-color: #322C2B; /* Example background color */
+    box-shadow: 0 4px 8px #E4C59E; /* Shadow effect */
+    border-radius: 5px; /* Optional: make corners rounded */
 }
 .itemChoiceHeader{
     font-family: 'Grape Nuts';
@@ -161,6 +167,25 @@ body {
     width: 50%;
 }
 
+.description {
+    display: flex;
+    flex-direction: column;
+}
+.price {
+    font-family: 'Grape Nuts';
+    margin-top: 15%;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15%;
+}
+label[for="quantities"] {
+    font-family: 'Grape Nuts';
+    font-weight: bold;
+    font-size: 20px;
+}
+#quantities {
+    margin-right: 5%;
+}
 
 @media only screen and (max-width: 1024px) {
     .homeButton {
@@ -236,5 +261,11 @@ body {
     .pic{
         max-width: 130px;
         margin-left: 2%;
+    }
+    .price {
+        font-size: 16px;
+    }
+    label[for="quantities"] {
+        font-size: 16px;
     }
 }

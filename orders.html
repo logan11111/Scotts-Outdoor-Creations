@@ -22,15 +22,45 @@
                 <a class="selectionText">Select Item(s):</a>
                 <div class="itemChoice">
                     <img class="pic" src="pictures/AchairFront.jpg">
-                    <a class="itemChoiceHeader">ADIRONDACK CHAIR</a>
+                    <div class="description"> 
+                        <a class="itemChoiceHeader">ADIRONDACK CHAIR</a>
+                        <a class="price">$200</a>
+                        <label for="quantities">Choose Quantity:</label>
+                        <select name="quantities" id="quantities">     <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="itemChoice">
                     <img class="pic" src="pictures/planterFront.jpg">
-                    <a class="itemChoiceHeader">THREE TIER PLANTER</a>
+                    <div class="description">
+                        <a class="itemChoiceHeader">THREE TIER PLANTER</a>
+                        <a class="price">$200</a>
+                        <label for="quantities">Choose Quantity:</label>
+                        <select name="quantities" id="quantities">     <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="itemChoice">
                     <img class="pic" src="pictures/RockerSide.jpg">
-                    <a class="itemChoiceHeader">ADIRONDACK ROCKER</a>
+                    <div class="description">
+                        <a class="itemChoiceHeader">ADIRONDACK ROCKER</a>
+                        <a class="price">$200</a>
+                        <label for="quantities">Choose Quantity:</label>
+                        <select name="quantities" id="quantities">     <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,5 +88,25 @@
         </div>
         <button class="placeButton"> Place Order! &#8658;</button>
         <button class="homeButton" onclick="location.href='index.html'">&#8656; HOME</button>
+        <script>
+            // Wait for the DOM to be fully loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                // Select all quantity dropdowns
+                const selects = document.querySelectorAll('select[name="quantities"]');
+            
+                selects.forEach((select) => {
+                    select.addEventListener('change', function () {
+                        const itemChoiceDiv = this.closest('.itemChoice');
+            
+                        // Add or remove the 'selected' class based on the selected value
+                        if (this.value !== '0') {
+                            itemChoiceDiv.classList.add('selected');
+                        } else {
+                            itemChoiceDiv.classList.remove('selected');
+                        }
+                    });
+                });
+            });
+            </script>
     </body>
 </html>
