@@ -217,6 +217,9 @@ body {
     .selection {
         flex-direction: column;
     }
+    .endingInfo{
+        padding-bottom: 2%;
+    }
     .itemChoice {
         align-self: right;
         margin-bottom: 4%;
