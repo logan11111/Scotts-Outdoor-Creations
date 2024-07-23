@@ -20,12 +20,21 @@
         <div class="orderForm">
             <div class="selection">
                 <a class="selectionText">Select Item:</a>
-                <img class="pic" src="pictures/AchairFront.jpg"> 
+                <div class="itemChoice">
+                    <a class="itemChoiceHeader">ADIRONDACK CHAIR</a>
+                    <img class="pic" src="pictures/AchairFront.jpg">
+                </div>
+                <div class="itemChoice">
+                    <a class="itemChoiceHeader">THREE TIER PLANTER</a>
+                    <img class="pic" src="pictures/planterFront.jpg">
+                </div>
+                <div class="itemChoice">
+                    <a class="itemChoiceHeader">ADIRONDACK ROCKER</a>
+                    <img class="pic" src="pictures/RockerSide.jpg">
+                </div>
             </div>
             <div class="selection">
-                <a class="selectionText">Select Quantity of item:</a>
-                <p id="rangeValue">1</p> 
-                <input class="quantityButton" type="range" min="1" max="3" step="1" name="points" value="1" oninput="rangeValue.innerText = this.value">
+                <a class="selectionText">Select Quantity:</a>
             </div>
         </div>
         <button class="addButton"> Add Item <strong>&#43;</strong> </button>
