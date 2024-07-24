@@ -23,9 +23,8 @@ body {
     border-radius: 5px;
 }
 .selected {
-    background-color: #322C2B; /* Example background color */
-    box-shadow: 0 4px 8px #E4C59E; /* Shadow effect */
-    border-radius: 5px; /* Optional: make corners rounded */
+    background-color: #E4C59E; /* Example background color */
+    box-shadow: 0 4px 8px black; /* Shadow effect */
 }
 .itemChoiceHeader{
     font-family: 'Grape Nuts';
