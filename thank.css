@@ -43,3 +43,8 @@ body {
 .homeButton:active {
     background-color: #792422;
 }
+@media only screen and (max-width: 1024px) {
+    .thankText {
+        font-size: 30px;
+    }
+}
