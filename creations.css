@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 .orderButton {
-    font-family: 'Grape Nuts';
+    font-family: 'Times New Roman';
     width: 25%;
     height: 15%;
     margin-top: 2%;
@@ -21,7 +21,7 @@ body {
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
 }
 .TitleCreations {
-    font-family: 'Grape Nuts';
+    font-family: 'Times New Roman';
     color: #E4C59E;
     font-size: 55px;
     margin: 0;
@@ -66,7 +66,7 @@ body {
     flex-direction: column;
 }
 .text {
-    font-family: 'Grape Nuts';
+    font-family: Georgia;
     color: #E4C59E;
     font-size: 25px;
     width: 81%;
@@ -76,8 +76,8 @@ body {
 }
 
 .itemName {
-    font-family: 'Grape Nuts';
-    color: #E4C59E; 
+    font-family: 'Times New Roman';
+    color: #AF8260; 
     align-self: center;
     font-size: 45px;
     text-shadow: 4px 4px 4px black;
@@ -92,7 +92,7 @@ body {
     font-size: 20px;
     cursor: pointer;
     color: #E4C59E;
-    font-family: 'Grape Nuts';
+    font-family: 'Times New Roman';
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
     -webkit-tap-highlight-color: transparent;
     text-shadow: 4px 4px 4px black;
@@ -110,7 +110,7 @@ body {
         flex-direction: column;
     }
     .TitleCreations {
-        font-size: 30px; /* Adjust font size */
+        font-size: 25px; /* Adjust font size */
         margin-top: 20px; /* Add top margin */
         margin-left: 5%;
         margin-bottom: 7%;
@@ -149,7 +149,7 @@ body {
         align-self: center;
     }
     .itemName {
-        margin: 4% 2% 1% 0%;
+        margin: 4% 2% 4% 0%;
         font-size: 20px;
     }
     .item {
@@ -164,13 +164,12 @@ body {
         box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
     }
     .orderButton {
-        font-family: 'Grape Nuts';
         width: 40%;
         height: 50%;
         margin-top: 2%;
         box-shadow: inset;
         align-self: center;
-        font-size: 15px;
+        font-size: 13px;
         margin-bottom: 4%;
     }
     .orderButton:hover {
