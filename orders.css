@@ -269,4 +269,7 @@ label[for="quantities"] {
     label[for="quantities"] {
         font-size: 16px;
     }
+    .homeButton{
+        top: 3%;
+    }
 }

@@ -192,4 +192,7 @@ body {
     .answerText {
         font-size: 14px;
     }
+    .homeButton{
+        top: 3%;
+    }
 }

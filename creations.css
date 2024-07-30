@@ -142,7 +142,7 @@ body {
         display: flex;
     }
     .text {
-        font-size: 15px;
+        font-size: 14px;
         width: 75%;
         margin-top: 3%;
         margin-right: 5%;
@@ -150,7 +150,7 @@ body {
     }
     .itemName {
         margin: 4% 2% 4% 0%;
-        font-size: 20px;
+        font-size: 16px;
     }
     .item {
         margin-top: 4%;
@@ -174,5 +174,8 @@ body {
     }
     .orderButton:hover {
         box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
+    }
+    .homeButton{
+        top: 3%;
     }
 }
