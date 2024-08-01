@@ -174,7 +174,7 @@ body {
     }
     .homeButton {
         right: 2%;
-        top: 25px;
+        top: 2%;
         font-size: 15px;
     }
     .homeButton:hover {
@@ -191,8 +191,5 @@ body {
     }
     .orderButton:hover {
         box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
-    }
-    .homeButton{
-        top: 3%;
     }
 }
