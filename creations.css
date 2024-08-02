@@ -49,7 +49,6 @@ body {
     border-style: solid;
     border-color: #E4C59E;
     box-shadow: 4px 4px 10px black;
-    /* Remove fixed height for dynamic sizing */
     height: auto; 
 }
 
