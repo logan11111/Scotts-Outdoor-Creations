@@ -7,6 +7,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+        <div id="confirmationPopup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h1 style="color: #E4C59E; font-family: 'Times New Roman';">Confirm Your Order</h1>
+                <h2 style="color: #E4C59E; font-family: 'Times New Roman';"> Order Details</h2>
+                <h2 style="color: #E4C59E; font-family: 'Times New Roman';"> Contact Information</h2>
+                <p style="color: #E4C59E; font-family: 'Times New Roman';">Are you sure you want to place this order?</p>
+                <div class="popup-buttons">
+                    <button id="confirmButton">Confirm</button>
+                    <button id="cancelButton">Cancel</button>
+                </div>
+            </div>
+        </div>
         <div class="header">
             <h1 class="TitleOrder">ORDER</h1>
         </div>
@@ -94,29 +107,31 @@
                 </div>
             </div>
         </div>
-        <div class="endingInfo">
-            <div class="selection">
-                <a class="selectionTextBottom">First Name:</a>
-                <input class="inputText">
+        <form action="thank.html" method="post">
+            <div class="endingInfo">
+                <div class="selection">
+                    <label class="selectionTextBottom">First Name:</label>
+                    <input type="text" class="inputText" placeholder="First Name" required>
+                </div>
+                <div class="selection">
+                    <label class="selectionTextBottom">Last Name:</label>
+                    <input type="text" class="inputText" placeholder="Last Name" required>
+                </div>
+                <div class="selection">
+                    <label class="selectionTextBottom">Phone Number:</label>
+                    <input type="tel" class="inputText" placeholder="Phone Number" required>
+                </div>
+                <div class="selection">
+                    <label class="selectionTextBottom">Email:</label>
+                    <input type="email" class="inputText" placeholder="Email" required>
+                </div>
+                <div class="selection">
+                    <label class="selectionTextBottom">Special Requests:</label>
+                    <input type="text" class="specialText" placeholder="Please be specific with any special requests, field not required">
+                </div>
             </div>
-            <div class="selection">
-                <a class="selectionTextBottom">Last Name:</a>
-                <input class="inputText">
-            </div>
-            <div class="selection">
-                <a class="selectionTextBottom">Phone Number:</a>
-                <input class="inputText">
-            </div>
-            <div class="selection">
-                <a class="selectionTextBottom">Email:</a>
-                <input class="inputText" type="email">
-            </div>
-            <div class="selection">
-                <a class="selectionTextBottom">Special Requests:</a>
-                <input class="specialText">
-            </div>
-        </div>
-        <button class="placeButton" onclick="location.href='thank.html'"> Place Order! &#8658;</button>
+            <button type="submit" class="placeButton">Place Order! &#8658;</button>
+        </form>
         <button class="homeButton" onclick="location.href='index.html'">&#8656; HOME</button>
         <script>
             // Wait for the DOM to be fully loaded
@@ -137,6 +152,49 @@
                     });
                 });
             });
+            </script>
+            <script>
+                // script for confirming pop up
+                document.addEventListener('DOMContentLoaded', function () {
+                    const form = document.querySelector('form');
+                    const placeOrderButton = document.querySelector('.placeButton');
+                    const confirmationPopup = document.getElementById('confirmationPopup');
+                    const confirmButton = document.getElementById('confirmButton');
+                    const cancelButton = document.getElementById('cancelButton');
+                    const closeButton = document.querySelector('.close');
+
+                    placeOrderButton.addEventListener('click', function (event) {
+                        event.preventDefault(); // Prevent default form submission
+
+                        // Check if the form is valid
+                        if (form.checkValidity()) {
+                            confirmationPopup.style.display = 'block'; // Show the popup if the form is valid
+                        } else {
+                            // If form is invalid, trigger validation messages
+                            form.reportValidity();
+                        }
+                    });
+
+                    confirmButton.addEventListener('click', function () {
+                        confirmationPopup.style.display = 'none'; // Hide the popup
+                        form.submit(); // Submit the form if confirmed
+                    });
+
+                    cancelButton.addEventListener('click', function () {
+                        confirmationPopup.style.display = 'none'; // Hide the popup if canceled
+                    });
+
+                    closeButton.addEventListener('click', function () {
+                        confirmationPopup.style.display = 'none'; // Hide the popup when clicking close
+                    });
+
+                    // Hide the popup if the user clicks outside of it
+                    window.addEventListener('click', function (event) {
+                        if (event.target === confirmationPopup) {
+                            confirmationPopup.style.display = 'none';
+                        }
+                    });
+                });
             </script>
     </body>
 </html>
