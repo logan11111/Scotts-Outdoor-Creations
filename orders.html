@@ -151,50 +151,60 @@
                         }
                     });
                 });
-            });
-            </script>
-            <script>
+        
+                function validateSelection() {
+                    let valid = false;
+                    selects.forEach((select) => {
+                        if (select.value !== '0') {
+                            valid = true;
+                        }
+                    });
+                    return valid;
+                }
+        
                 // script for confirming pop up
-                document.addEventListener('DOMContentLoaded', function () {
-                    const form = document.querySelector('form');
-                    const placeOrderButton = document.querySelector('.placeButton');
-                    const confirmationPopup = document.getElementById('confirmationPopup');
-                    const confirmButton = document.getElementById('confirmButton');
-                    const cancelButton = document.getElementById('cancelButton');
-                    const closeButton = document.querySelector('.close');
-
-                    placeOrderButton.addEventListener('click', function (event) {
-                        event.preventDefault(); // Prevent default form submission
-
-                        // Check if the form is valid
-                        if (form.checkValidity()) {
-                            confirmationPopup.style.display = 'block'; // Show the popup if the form is valid
-                        } else {
-                            // If form is invalid, trigger validation messages
-                            form.reportValidity();
-                        }
-                    });
-
-                    confirmButton.addEventListener('click', function () {
-                        confirmationPopup.style.display = 'none'; // Hide the popup
-                        form.submit(); // Submit the form if confirmed
-                    });
-
-                    cancelButton.addEventListener('click', function () {
-                        confirmationPopup.style.display = 'none'; // Hide the popup if canceled
-                    });
-
-                    closeButton.addEventListener('click', function () {
-                        confirmationPopup.style.display = 'none'; // Hide the popup when clicking close
-                    });
-
-                    // Hide the popup if the user clicks outside of it
-                    window.addEventListener('click', function (event) {
-                        if (event.target === confirmationPopup) {
-                            confirmationPopup.style.display = 'none';
-                        }
-                    });
+                const form = document.querySelector('form');
+                const placeOrderButton = document.querySelector('.placeButton');
+                const confirmationPopup = document.getElementById('confirmationPopup');
+                const confirmButton = document.getElementById('confirmButton');
+                const cancelButton = document.getElementById('cancelButton');
+                const closeButton = document.querySelector('.close');
+        
+                placeOrderButton.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent default form submission
+        
+                    // Check if the form is valid
+                    if (form.checkValidity() && validateSelection()) {
+                        confirmationPopup.style.display = 'block'; // Show the popup if the form is valid
+                    } if(!validateSelection()) {
+                        // If form is invalid, trigger validation messages
+                        alert('Please select at least one item.');
+                    }
+                    if(!form.checkValidity()){
+                        form.reportValidity();
+                    }
                 });
-            </script>
+        
+                confirmButton.addEventListener('click', function () {
+                    confirmationPopup.style.display = 'none'; // Hide the popup
+                    form.submit(); // Submit the form if confirmed
+                });
+        
+                cancelButton.addEventListener('click', function () {
+                    confirmationPopup.style.display = 'none'; // Hide the popup if canceled
+                });
+        
+                closeButton.addEventListener('click', function () {
+                    confirmationPopup.style.display = 'none'; // Hide the popup when clicking close
+                });
+        
+                // Hide the popup if the user clicks outside of it
+                window.addEventListener('click', function (event) {
+                    if (event.target === confirmationPopup) {
+                        confirmationPopup.style.display = 'none';
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
