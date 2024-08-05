@@ -21,6 +21,8 @@
                     <strong>Email:</strong> <span id="popupEmail" style="color: #AF8260;"></span><br>
                     <strong>Special Requests:</strong> <span id="popupSpecialRequests" style="color: #AF8260;"></span>
                 </p>
+                <h2 style="color: #E4C59E; font-family: 'Times New Roman';"> Order Total</h2>
+                <span id="priceTotalAll" style="color: #AF8260;"></span><br>
                 <p style="color: #E4C59E; font-family: 'Times New Roman';">Are you sure you want to place this order?</p>
                 <div class="popup-buttons">
                     <button id="confirmButton">Confirm</button>
@@ -197,20 +199,26 @@
                         document.getElementById('popupSpecialRequests').textContent = specialRequests;
 
                         let orderDetails = '';
+                        grandTotal = 0;
                         document.querySelectorAll('.itemChoice').forEach((itemChoice) => {
                             const itemName = itemChoice.querySelector('.itemChoiceHeader').textContent;
                             const quantity = itemChoice.querySelector('select[name="quantities"]').value;
+                            const priceText = itemChoice.querySelector('.price').textContent;
+                            const price = parseFloat(priceText.replace('$', ''));
                             if (quantity !== '0') {
-                                orderDetails += `<p><strong>${itemName}:</strong> ${quantity}</p>`;
+                                const totalPrice = (price * quantity).toFixed(2); // Calculate total price
+                                grandTotal += parseFloat(totalPrice);
+                                orderDetails += `<p><strong>${itemName}:</strong> ${quantity} = $${totalPrice}</p>`;
                             }
                         });
 
                         // Update popup with order details
                         document.getElementById('popupOrderDetails').innerHTML = orderDetails;
+                        document.getElementById('priceTotalAll').innerHTML = '$' + grandTotal;
 
                         confirmationPopup.style.display = 'block'; // Show the popup if the form is valid
 
-                        
+
                     } if(!validateSelection()) {
                         // If form is invalid, trigger validation messages
                         alert('Please select at least one item.');
