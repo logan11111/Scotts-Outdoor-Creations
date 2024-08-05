@@ -10,7 +10,7 @@ body {
     font-size: 30px;
     cursor: pointer;
     color: #E4C59E;
-    font-family: 'Grape Nuts';
+    font-family: 'Times New Roman';
     margin: 0 10px; /* Adds horizontal margin for visual spacing */
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
     -webkit-tap-highlight-color: transparent;
@@ -35,11 +35,11 @@ body {
     padding-right: 0;
 }
 .Title {
-    font-family: 'Grape Nuts';
+    font-family: 'Times New Roman';
     color: #E4C59E;
     font-size: 55px;
     margin: 0;
-    margin-left: 0.4%;
+    margin-left: 1%;
     margin-top: 1%;
     text-shadow: 0px 4px 10px black;
 }
