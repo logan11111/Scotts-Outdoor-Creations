@@ -12,6 +12,7 @@
                 <span class="close">&times;</span>
                 <h1 style="color: #E4C59E; font-family: 'Times New Roman';">Confirm Your Order</h1>
                 <h2 style="color: #E4C59E; font-family: 'Times New Roman';"> Order Details</h2>
+                <div id="popupOrderDetails" style="color: #AF8260; font-family: 'Times New Roman';"></div>
                 <h2 style="color: #E4C59E; font-family: 'Times New Roman';"> Contact Information</h2>
                 <p style="color: #E4C59E; font-family: 'Times New Roman';">
                     <strong>First Name:</strong> <span id="popupFirstName" style="color: #AF8260;"></span><br>
@@ -195,7 +196,21 @@
                         document.getElementById('popupEmail').textContent = email;
                         document.getElementById('popupSpecialRequests').textContent = specialRequests;
 
+                        let orderDetails = '';
+                        document.querySelectorAll('.itemChoice').forEach((itemChoice) => {
+                            const itemName = itemChoice.querySelector('.itemChoiceHeader').textContent;
+                            const quantity = itemChoice.querySelector('select[name="quantities"]').value;
+                            if (quantity !== '0') {
+                                orderDetails += `<p><strong>${itemName}:</strong> ${quantity}</p>`;
+                            }
+                        });
+
+                        // Update popup with order details
+                        document.getElementById('popupOrderDetails').innerHTML = orderDetails;
+
                         confirmationPopup.style.display = 'block'; // Show the popup if the form is valid
+
+                        
                     } if(!validateSelection()) {
                         // If form is invalid, trigger validation messages
                         alert('Please select at least one item.');
