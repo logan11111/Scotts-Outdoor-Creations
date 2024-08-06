@@ -229,36 +229,9 @@
                 });
         
                 confirmButton.addEventListener('click', function () {
-                    // Gather form data
-                    const firstName = form.querySelector('input[placeholder="First Name"]').value;
-                    const lastName = form.querySelector('input[placeholder="Last Name"]').value;
-                    const phoneNumber = form.querySelector('input[placeholder="Phone Number"]').value;
-                    const email = form.querySelector('input[placeholder="Email"]').value;
-                    const specialRequests = form.querySelector('input[placeholder="Please be specific with any special requests, field not required"]').value;
 
-                    const formData = new FormData();
-                    formData.append('firstName', firstName);
-                    formData.append('lastName', lastName);
-                    formData.append('phoneNumber', phoneNumber);
-                    formData.append('email', email);
-                    formData.append('specialRequests', specialRequests);
-                    formData.append('grandTotal', grandTotal.toFixed(2));
-
-                    // Send form data to the server
-                    fetch('sendEmail.php', {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => response.text())
-                    .then(result => {
-                        // Handle response from server
-                        console.log(result);
-                        confirmationPopup.style.display = 'none'; // Hide the popup
-                        // window.location.href = 'thank.html'; // Redirect to thank.html
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
+                    confirmationPopup.style.display = 'none'; // Hide the popup
+                    window.location.href = 'thank.html'; // Redirect to thank.htm;
                 });
         
                 cancelButton.addEventListener('click', function () {
