@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "hepfnerl344@gmail.com"; // Replace with your email address
+    $to = "hepfnerlogan609@gmail.com"; // Replace with your email address
     $subject = "New Order Received";
 
     // Sanitize and validate input
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Set content-type header for sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= 'From: Hepfnerl344@gmail.com' . "\r\n"; // Replace with your from address
+    $headers .= 'From: hepfnerl344@gmail.com' . "\r\n"; // Replace with your from address
 
     if (mail($to, $subject, $message, $headers)) {
         echo "Email sent successfully.";
