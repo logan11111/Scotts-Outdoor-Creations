@@ -178,10 +178,21 @@
                             orderDetails += `<p><strong>${itemName}:</strong> ${quantity} = $${totalPrice}</p>`;
                         }
                     });
+                    
+                    const firstName = form.querySelector('input[name="firstName"]').value;
+                    const lastName = form.querySelector('input[name="lastName"]').value;
+                    const phoneNumber = form.querySelector('input[name="phoneNumber"]').value;
+                    const email = form.querySelector('input[name="email"]').value;
+                    const specialRequests = form.querySelector('input[name="specialRequests"]').value;
 
                     // Update popup content
                     document.getElementById('popupOrderDetails').innerHTML = orderDetails;
                     document.getElementById('priceTotalAll').innerHTML = '$' + grandTotal;
+                    document.getElementById('popupFirstName').textContent = firstName;
+                    document.getElementById('popupLastName').textContent = lastName;
+                    document.getElementById('popupPhoneNumber').textContent = phoneNumber;
+                    document.getElementById('popupEmail').textContent = email;
+                    document.getElementById('popupSpecialRequests').textContent = specialRequests;
 
                     // Update hidden fields
                     const hiddenOrderDetails = document.getElementById('hiddenOrderDetails');
