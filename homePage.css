@@ -2,9 +2,6 @@ body {
     background-color: #322C2B;
     margin: 0;
 }
-.swiper-button-prev, .swiper-button-next {
-    color: #322C2B;
-}
 .swiper {
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
@@ -36,7 +33,6 @@ body {
 .images img {
     width: 100%;
     height: 100%; /* Ensure images cover their grid cell fully */
-
 }
 
 .CreationsButton, .OrderButton, .AboutButton {
