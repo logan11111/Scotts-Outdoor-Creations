@@ -2,6 +2,43 @@ body {
     background-color: #322C2B;
     margin: 0;
 }
+.swiper-button-prev, .swiper-button-next {
+    color: #322C2B;
+}
+.swiper {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    max-width: 100%; /* Full width without a max limit */
+    max-height: 100%; /* Full height without a max limit */
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    display: flex; /* Flex display to center grid */
+    justify-content: center;
+    align-items: center; /* Center grid vertically */
+    width: 100%; /* Ensure slide takes full width */
+    height: 100%; /* Ensure slide takes full height */
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 0; /* No space between the images */
+    width: 100%; /* Full width for grid */
+    height: 75%; /* Full height for grid */
+    padding: 0; /* No padding around the grid container */
+    margin: 0; /* Remove margins to use full space */
+    border-top: 10px solid #E4C59E;
+    border-bottom: 10px solid #E4C59E;
+}
+
+.images img {
+    width: 100%;
+    height: 100%; /* Ensure images cover their grid cell fully */
+
+}
+
 .CreationsButton, .OrderButton, .AboutButton {
     background-color: #803D3B;
     border-radius: 25px;
@@ -14,26 +51,17 @@ body {
     margin: 0 10px; /* Adds horizontal margin for visual spacing */
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
     -webkit-tap-highlight-color: transparent;
+    margin-bottom: 3%;
 }
+
 .CreationsButton:hover, .OrderButton:hover, .AboutButton:hover {
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
 }
+
 .CreationsButton:active, .OrderButton:active, .AboutButton:active {
     background-color: #792422;
 }
-.pic1, .pic2, .pic3, .pic4{
-    width: 100%; /* Make images take up the full width of their container */
-    height: 85%; /* Maintain aspect ratio */
-    border-style: solid;
-    border-color: #E4C59E;
-    border-right: 0;
-    border-left: 0;
-    border-width: 0.3cm;
-    vertical-align: top;
-    margin-top: 2%; /* Remove top margin */
-    padding-left: 0;
-    padding-right: 0;
-}
+
 .Title {
     font-family: 'Times New Roman';
     color: #E4C59E;
@@ -43,28 +71,23 @@ body {
     margin-top: 1%;
     text-shadow: 0px 4px 10px black;
 }
-.images {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    gap: 0; /* No space between the images */
-    padding: 0; /* No padding around the grid container */
-    margin-left: 0.4%;
-    margin-right: 0.4%;
-    margin-top: 3%;
-}
+
 .homeButtons {
     display: flex;
     justify-content: space-between; /* Evenly spaces out the buttons */
     margin: 1.5% 11.2%; /* Adjust margin to center the buttons container */
     margin-top: 3%;
 }
+
 .OrderButton {
     margin-left: 8%;
     margin-right: 8%;
 }
+
 .AboutButton {
     margin-left: 4%;
 }
+
 .CreationsButton {
     margin-right: 4%;
 }
@@ -110,7 +133,6 @@ body {
     }
     .pic3, .pic4 {
         border-top: 0;
-
     }
     .images {
         margin-bottom: 15%;

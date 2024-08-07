@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Scott's Outdoor Creations</title>
-        <link href='https://fonts.googleapis.com/css?family=Grape Nuts' rel='stylesheet'>
+        <title>Scott's Outdoor Creations</title>
+        <link href="https://fonts.googleapis.com/css?family=Grape+Nuts" rel="stylesheet">
         <link rel="stylesheet" href="homePage.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     </head>
     <body>
         <h1 class="Title">SCOTT'S OUTDOOR CREATIONS</h1>
@@ -13,11 +14,57 @@
             <button class="OrderButton" onclick="location.href='orders.html'">ORDER &#8658;</button>
             <button class="AboutButton" onclick="location.href='about.html'">ABOUT &#8658;</button>
         </div>
-        <div class="images">
-            <img class="pic1" src="pictures/RockerSide.jpg"> 
-            <img class="pic2" src="pictures/AchairFront.jpg">
-            <img class="pic3" src="pictures/AchairSetFront.jpg">
-            <img class="pic4" src="pictures/planterFront.jpg">
+        
+        <!-- Swiper Container -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="images">
+                        <img src="pictures/RockerSide.jpg" alt="Rocker Side">
+                        <img src="pictures/AchairFront.jpg" alt="Chair Front">
+                        <img src="pictures/AchairSetFront.jpg" alt="Chair Set Front">
+                        <img src="pictures/planterFront.jpg" alt="Planter Front">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="images">
+                        <img src="pictures/smallchairfront.jpg" alt="Rocker Side">
+                        <img src="pictures/AchairSetSide.jpg" alt="Chair Front">
+                        <img src="pictures/planterSide.jpg" alt="Chair Set Front">
+                        <img src="pictures/smallchairback.jpg" alt="Planter Front">
+                    </div>
+                </div>
+                <!-- Add more slides if needed -->
+            </div>
+
+            <!-- Add Scrollbar -->
+            <div class="swiper-scrollbar"></div>
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="slider.js"></script>
+        <script>document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.swiper', {
+                slidesPerView: 1, // Show 1 grid per slide
+                loop: true, // Enable looping
+                speed: 1500,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    hide: true,
+                },
+                autoplay: {
+                    delay: 3000, // 3 seconds
+                    disableOnInteraction: false,
+                },
+            });
+        });</script>
     </body>
 </html>
