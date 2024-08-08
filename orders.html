@@ -214,7 +214,7 @@
                             if (quantity !== '0') {
                                 const totalPrice = (price * quantity).toFixed(2); // Calculate total price
                                 grandTotal += parseFloat(totalPrice);
-                                orderDetails += `<p><strong>${itemName}:</strong> ${quantity} = $${totalPrice}</p>`;
+                                orderDetails += `${itemName}x ${quantity} = $${totalPrice}\n`;
                             }
                         });
                         document.getElementById('popupOrderDetails').innerHTML = orderDetails;
