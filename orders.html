@@ -153,6 +153,32 @@
             let grandTotal = 0; // Initialize at the beginning of the script
             // Wait for the DOM to be fully loaded
             document.addEventListener('DOMContentLoaded', function () {
+
+                // Select all quantity dropdowns
+                const selects = document.querySelectorAll('select[name="quantities"]');
+
+                selects.forEach((select) => {
+                    select.addEventListener('change', function () {
+                        const itemChoiceDiv = this.closest('.itemChoice');
+
+                        // Add or remove the 'selected' class based on the selected value
+                        if (this.value !== '0') {
+                            itemChoiceDiv.classList.add('selected');
+                        } else {
+                            itemChoiceDiv.classList.remove('selected');
+                        }
+                    });
+                });
+
+                function validateSelection() {
+                    let valid = false;
+                    selects.forEach((select) => {
+                        if (select.value !== '0') {
+                            valid = true;
+                        }
+                    });
+                    return valid;
+                }
                 const form = document.querySelector('#orderForm');
                 const placeOrderButton = document.querySelector('.placeButton');
                 const confirmationPopup = document.getElementById('confirmationPopup');
@@ -162,47 +188,55 @@
 
                 placeOrderButton.addEventListener('click', function (event) {
                     event.preventDefault(); // Prevent default form submission
-
-                    let orderDetails = '';
-                    let grandTotal = 0;
-
-                    // Process form and items
-                    document.querySelectorAll('.itemChoice').forEach((itemChoice) => {
-                        const itemName = itemChoice.querySelector('.itemChoiceHeader').textContent;
-                        const quantity = itemChoice.querySelector('select[name="quantities"]').value;
-                        const priceText = itemChoice.querySelector('.price').textContent;
-                        const price = parseFloat(priceText.replace('$', ''));
-                        if (quantity !== '0') {
-                            const totalPrice = (price * quantity).toFixed(2); // Calculate total price
-                            grandTotal += parseFloat(totalPrice);
-                            orderDetails += `<p><strong>${itemName}:</strong> ${quantity} = $${totalPrice}</p>`;
-                        }
-                    });
+                    orderDetails = '';
+                    grandTotal = 0;
                     
-                    const firstName = form.querySelector('input[name="firstName"]').value;
-                    const lastName = form.querySelector('input[name="lastName"]').value;
-                    const phoneNumber = form.querySelector('input[name="phoneNumber"]').value;
-                    const email = form.querySelector('input[name="email"]').value;
-                    const specialRequests = form.querySelector('input[name="specialRequests"]').value;
+                    // Check if the form is valid
+                    if (form.checkValidity() && validateSelection()) {
+                        const firstName = form.querySelector('input[placeholder="First Name"]').value;
+                        const lastName = form.querySelector('input[placeholder="Last Name"]').value;
+                        const phoneNumber = form.querySelector('input[placeholder="Phone Number"]').value;
+                        const email = form.querySelector('input[placeholder="Email"]').value;
+                        const specialRequests = form.querySelector('input[placeholder="Please be specific with any special requests, field not required"]').value;
 
-                    // Update popup content
-                    document.getElementById('popupOrderDetails').innerHTML = orderDetails;
-                    document.getElementById('priceTotalAll').innerHTML = '$' + grandTotal;
-                    document.getElementById('popupFirstName').textContent = firstName;
-                    document.getElementById('popupLastName').textContent = lastName;
-                    document.getElementById('popupPhoneNumber').textContent = phoneNumber;
-                    document.getElementById('popupEmail').textContent = email;
-                    document.getElementById('popupSpecialRequests').textContent = specialRequests;
+                        // Update popup content with form values
+                        document.getElementById('popupFirstName').textContent = firstName;
+                        document.getElementById('popupLastName').textContent = lastName;
+                        document.getElementById('popupPhoneNumber').textContent = phoneNumber;
+                        document.getElementById('popupEmail').textContent = email;
+                        document.getElementById('popupSpecialRequests').textContent = specialRequests;
 
-                    // Update hidden fields
-                    const hiddenOrderDetails = document.getElementById('hiddenOrderDetails');
-                    const hiddenGrandTotal = document.getElementById('hiddenGrandTotal');
-                    if (hiddenOrderDetails && hiddenGrandTotal) {
-                        hiddenOrderDetails.value = orderDetails;
-                        hiddenGrandTotal.value = grandTotal;
+                        document.querySelectorAll('.itemChoice').forEach((itemChoice) => {
+                            const itemName = itemChoice.querySelector('.itemChoiceHeader').textContent;
+                            const quantity = itemChoice.querySelector('select[name="quantities"]').value;
+                            const priceText = itemChoice.querySelector('.price').textContent;
+                            const price = parseFloat(priceText.replace('$', ''));
+                            if (quantity !== '0') {
+                                const totalPrice = (price * quantity).toFixed(2); // Calculate total price
+                                grandTotal += parseFloat(totalPrice);
+                                orderDetails += `<p><strong>${itemName}:</strong> ${quantity} = $${totalPrice}</p>`;
+                            }
+                        });
+                        document.getElementById('popupOrderDetails').innerHTML = orderDetails;
+                        document.getElementById('priceTotalAll').innerHTML = '$' + grandTotal;
+
+                        // Update hidden fields
+                        const hiddenOrderDetails = document.getElementById('hiddenOrderDetails');
+                        const hiddenGrandTotal = document.getElementById('hiddenGrandTotal');
+                        if (hiddenOrderDetails && hiddenGrandTotal) {
+                            hiddenOrderDetails.value = orderDetails;
+                            hiddenGrandTotal.value = grandTotal;
+                        }
+
+                        confirmationPopup.style.display = 'block'; // Show the popup if the form is valid
+                    };
+                    if(!validateSelection()) {
+                            // If form is invalid, trigger validation messages
+                            alert('Please select at least one item.');
+                        }
+                        if(!form.checkValidity()){
+                            form.reportValidity();
                     }
-
-                    confirmationPopup.style.display = 'block'; // Show the popup if the form is valid
                 });
 
                 confirmButton.addEventListener('click', function () {
