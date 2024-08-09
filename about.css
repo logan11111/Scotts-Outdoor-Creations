@@ -14,7 +14,7 @@ body {
 .homeButton {
     position: absolute;
     top: 2.5%;
-    right: 10%;
+    right: 1%;
     background-color: #803D3B;
     padding: 1% 1.5% 1% 1.5%;
     border-radius: 7px;
@@ -41,7 +41,7 @@ body {
     background-color: #803D3B;
     display: flex;
     flex: 1;
-    margin: 1% 10% 1% 0%;
+    margin: 1% 1% 1% 0%;
     border-top-right-radius: 40%;
     border-bottom-right-radius: 40%;
     border-style: solid;
@@ -80,7 +80,7 @@ body {
 .FAQ {
     background-color: #803D3B;
     display: flex;
-    margin-right: 10%;
+    margin-right: 1%;
     margin-top: 2%;
     margin-left: 1%;
     margin-bottom: 1%;

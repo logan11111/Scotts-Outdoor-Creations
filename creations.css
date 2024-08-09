@@ -40,7 +40,7 @@ body {
     background-color: #803D3B;
     display: flex;
     flex: 1; /* Allows the item to grow and shrink to fill the space */
-    margin-right: 10%;
+    margin-right: 2%;
     margin-top: 1%;
     margin-bottom: 1%;
     border-radius: 20%;
@@ -95,7 +95,7 @@ body {
 .homeButton {
     position: absolute;
     top: 2.5%;
-    right: 10%;
+    right: 2%;
     background-color: #803D3B;
     padding: 1% 1.5% 1% 1.5%;
     border-radius: 7px;
@@ -121,7 +121,7 @@ body {
     }
     .TitleCreations {
         font-size: 25px; /* Adjust font size */
-        margin-top: 20px; /* Add top margin */
+        margin-top: 25px; /* Add top margin */
         margin-left: 5%;
         margin-bottom: 7%;
     }
