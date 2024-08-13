@@ -128,7 +128,7 @@ body {
     }
     .TitleCreations {
         font-size: 25px; /* Adjust font size */
-        margin-top: 25px; /* Add top margin */
+        margin-top: 20px; /* Add top margin */
         margin-left: 5%;
         margin-bottom: 7%;
     }
@@ -180,7 +180,7 @@ body {
     }
     .homeButton {
         right: 2%;
-        top: 2%;
+        top: 20px;
         font-size: 15px;
     }
     .homeButton:hover {
