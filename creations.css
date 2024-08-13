@@ -16,6 +16,7 @@ body {
     -webkit-tap-highlight-color: transparent;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 2%;
 }
 .orderButton:hover {
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
