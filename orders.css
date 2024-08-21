@@ -86,7 +86,7 @@ body {
     margin-right: 1%;
     margin-left: 1%;
     border-radius: 5px;
-    flex: 0 30%; /* Flex-grow: 1, Flex-shrink: 0, Base-width: 30% */
+    flex: 0 31.3%; /* Flex-grow: 1, Flex-shrink: 0, Base-width: 30% */
 }
 .selected {
     background-color: #E4C59E; /* Example background color */
