@@ -60,7 +60,7 @@ body {
 }
 
 .pic {
-    width: 22%; /* Set a fixed width, allowing height to adjust */
+    width: 28%; /* Set a fixed width, allowing height to adjust */
     height: auto; /* Allow height to adjust based on the .item content */
     align-self: stretch; /* Ensure it stretches to match .item height */
     border-style: solid;
