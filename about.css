@@ -96,11 +96,15 @@ body {
     align-self: center;
     font-family: Georgia;
     font-size: 20px;
-    color: black;
     cursor: pointer;
     font-weight: bold;
     background-color: #AF8260;
     -webkit-tap-highlight-color: transparent;
+    border: 3px solid #322C2B;
+    border-bottom: 0;
+}
+.questionButton:hover{
+    background-color: #E4C59E;
 }
 
 .Question {
@@ -123,6 +127,8 @@ body {
     background-color: #E4C59E;
     align-content: center;
     justify-content: center;
+    border: 3px solid #322C2B;
+    border-top: 0;
 }
 .dropdown.active {
     display: flex;
@@ -131,8 +137,8 @@ body {
     font-family: Georgia;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-bottom: 1%;
+    margin-top: 1%;
     padding-left: 1%;
 }
 
@@ -142,6 +148,9 @@ body {
         margin-top: 20px; /* Add top margin */
         margin-left: 5%;
         margin-bottom: 4%;
+    }
+    body{
+        padding-bottom: 5%;
     }
     .fullIntro{
         flex-direction: column;
@@ -202,5 +211,10 @@ body {
     }
     .answerText {
         font-size: 14px;
+        margin-bottom: 2%;
+        margin-top: 2%;
     }
+    .questionButton:hover{
+    background-color: #AF8260;
+}
 }

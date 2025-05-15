@@ -1,6 +1,7 @@
 body {
     background-color: #322C2B;
     margin: 0;
+    overflow: hidden;
 }
 .swiper {
     width: 100vw; /* Full viewport width */
@@ -9,6 +10,7 @@ body {
     max-height: 100%; /* Full height without a max limit */
     margin: 0 auto;
 }
+
 
 .swiper-slide {
     display: flex; /* Flex display to center grid */
