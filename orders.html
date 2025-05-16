@@ -165,7 +165,7 @@
                 </div>
                 <div class="inputSelection">
                     <label class="selectionTextBottom">Special Requests:</label>
-                    <input type="text" name="specialRequests" class="inputText" placeholder="Please be specific with any special requests, field not required">
+                    <textarea name="specialRequests" class="inputText" placeholder="Please be specific with any special requests, field not required"></textarea>
                 </div>
             </div> 
             <!-- Hidden fields for order details and grand total -->
@@ -225,7 +225,7 @@
                         const lastName = form.querySelector('input[placeholder="Last Name"]').value;
                         const phoneNumber = form.querySelector('input[placeholder="Phone Number"]').value;
                         const email = form.querySelector('input[placeholder="Email"]').value;
-                        const specialRequests = form.querySelector('input[placeholder="Please be specific with any special requests, field not required"]').value;
+                        const specialRequests = form.querySelector('textarea[placeholder="Please be specific with any special requests, field not required"]').value;
 
                         // Update popup content with form values
                         document.getElementById('popupFirstName').textContent = firstName;

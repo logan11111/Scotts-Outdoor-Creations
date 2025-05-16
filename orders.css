@@ -267,10 +267,9 @@ body {
     margin-left: 2%;
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
 }
-.inputSelection input[name="specialRequests"] {
-    min-width: 50%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+.inputSelection textarea[name="specialRequests"] {
+    width: 60%;
+    height: 150px;
 }
 .description {
     display: flex;
@@ -382,5 +381,12 @@ label[for="quantities"] {
     }
     label[for="quantities"] {
         font-size: 16px;
+    }
+    .inputSelection input[name="email"] {
+    padding-right: 30%;
+    }
+    .inputSelection textarea[name="specialRequests"] {
+    width: 80%;
+    height: 120px;
     }
 }
