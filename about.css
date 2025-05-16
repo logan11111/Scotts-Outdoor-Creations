@@ -164,13 +164,13 @@ body {
         margin-bottom: 3%;
         border-radius: 0;
         padding-bottom: 2%;
-        width: 80%;
+        width: 90%;
         max-width: 700px;
         align-self: center;
     }
 
     .introImage {
-        width: 80%; /* Reduce width for better fit */ /* Maintain aspect ratio */
+        width: 90%; /* Reduce width for better fit */ /* Maintain aspect ratio */
         align-self: center;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -185,7 +185,7 @@ body {
     }
 
     .FAQ {
-        width: 80%;
+        width: 90%;
         margin: 0 auto; /* Centers the element horizontally */
         display: flex; /* Adds flexbox display */
         justify-content: center; /* Centers content inside the .FAQ div */
