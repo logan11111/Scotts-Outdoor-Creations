@@ -481,7 +481,7 @@ label[for="quantities"] {
     }
     .itemInfo{
         flex-direction: column;
-        max-height: fit-content;
+        height:auto;
         align-items: center;
     }
     .infoPics{
