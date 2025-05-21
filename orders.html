@@ -32,6 +32,50 @@
                 </div>
             </div>
 
+        <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:999;"></div>
+        <!--hidden item popups if user wants to view info on item-->
+        <div class="itemInfo" id="item1">
+            <img class="infoPics" src="pictures/AchairFront.jpg">
+            <div class="itemDescription">
+                <h2 class="itemDescriptionName">FULL SIZE ADIRONDACK CHAIR</h2>
+                <p class="itemDescriptionText">This chair has a unique curved back design for lower lumbar support and ultimate comfortability. </p>
+                <p class="itemDescriptionText">Stock chairs made from locally sourced pine and meticulously prepared and assembled with all materials built to withstand our harsh Alberta climate. All pieces treated with Penofin penetrating oil prior to assembly for optimal coverage and protection. </p>
+                <p class="itemDescriptionText">Estimated time frame from order to pick up is one week, depending on size of order and demand. Pick up only. If delivery is required, extra costs may apply. One year warranty.</p>
+            </div>  
+            <button class="closeButton">&times;</button>
+        </div>
+
+        <!--script for popping up item info-->
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.viewButton').forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = document.getElementById(button.dataset.target);
+                    target.classList.add('active');
+                    document.getElementById('overlay').style.display = 'block';
+                });
+            });
+
+            document.querySelectorAll('.closeButton').forEach(button => {
+                button.addEventListener('click', () => {
+                    button.closest('.itemInfo').classList.remove('active');
+                    document.getElementById('overlay').style.display = 'none';
+
+                });
+            });
+            document.addEventListener('click', (e) => {
+            const popup = document.querySelector('.itemInfo.active');
+            if (popup && !popup.contains(e.target) && !e.target.classList.contains('viewButton')) {
+                popup.classList.remove('active');
+                document.getElementById('overlay').style.display = 'none';
+
+                }
+            });  
+        });
+        </script>
+
+
+
         <!--intro to order page-->
         <div class="header">
             <h1 class="TitleOrder">ORDER</h1>
@@ -54,7 +98,7 @@
                     <div class="description"> 
                         <a class="itemChoiceHeader">FULL SIZE ADIRONDACK CHAIR</a>
                         <a class="price">$350</a>
-                        <button class="viewButton">View item</button>
+                        <button class="viewButton" data-target="item1">View item</button>
                         <label for="quantities">Choose Quantity:</label>
                         <select name="quantities" id="quantities">     <option value="0">0</option>
                             <option value="1">1</option>
@@ -69,7 +113,7 @@
                     <div class="description">
                         <a class="itemChoiceHeader">SMALL ADIRONDACK CHAIR</a>
                         <a class="price">$300</a>
-                        <button class="viewButton">View item</button>
+                        <button class="viewButton" data-target="item1">View item</button>
                         <label for="quantities">Choose Quantity:</label>
                         <select name="quantities" id="quantities">     <option value="0">0</option>
                             <option value="1">1</option>
@@ -84,7 +128,7 @@
                     <div class="description"> 
                         <a class="itemChoiceHeader">ADIRONDACK CHAIR SET</a>
                         <a class="price">$450</a>
-                        <button class="viewButton">View item</button>
+                        <button class="viewButton" data-target="item1">View item</button>
                         <label for="quantities">Choose Quantity:</label>
                         <select name="quantities" id="quantities">     <option value="0">0</option>
                             <option value="1">1</option>
@@ -99,7 +143,7 @@
                     <div class="description">
                         <a class="itemChoiceHeader">THREE TIER PLANTER</a>
                         <a class="price">$300</a>
-                        <button class="viewButton">View item</button>
+                        <button class="viewButton" data-target="item1">View item</button>
                         <label for="quantities">Choose Quantity:</label>
                         <select name="quantities" id="quantities">     <option value="0">0</option>
                             <option value="1">1</option>
@@ -114,7 +158,7 @@
                     <div class="description">
                         <a class="itemChoiceHeader">ADIRONDACK ROCKER</a>
                         <a class="price">$400</a>
-                        <button class="viewButton">View item</button>
+                        <button class="viewButton" data-target="item1">View item</button>
                         <label for="quantities">Choose Quantity:</label>
                         <select name="quantities" id="quantities">     <option value="0">0</option>
                             <option value="1">1</option>
@@ -129,7 +173,7 @@
                     <div class="description">
                         <a class="itemChoiceHeader">COFFEE TABLE</a>
                         <a class="price">$200</a>
-                        <button class="viewButton">View item</button>
+                        <button class="viewButton" data-target="item1">View item</button>
                         <label for="quantities">Choose Quantity:</label>
                         <select name="quantities" id="quantities">     <option value="0">0</option>
                             <option value="1">1</option>
@@ -144,7 +188,7 @@
                     <div class="description">
                         <a class="itemChoiceHeader">END TABLE</a>
                         <a class="price">$150</a>
-                        <button class="viewButton">View item</button>
+                        <button class="viewButton" data-target="item1">View item</button>
                         <label for="quantities">Choose Quantity:</label>
                         <select name="quantities" id="quantities">     <option value="0">0</option>
                             <option value="1">1</option>
@@ -156,9 +200,6 @@
                 </div>
             </div>
         </div>
-
-        <!--hidden item popups if user wants to view info on item-->
-        
 
         <!--formspree template to email Scott information-->
         <hr style="border-color: #E4C59E;">

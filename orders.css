@@ -54,6 +54,7 @@ body {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .close:focus {
@@ -313,6 +314,63 @@ label[for="quantities"] {
     margin-right: 5%;
     height: 10%;
 }
+.itemInfo{
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 80%;             
+    height: 80%;              
+    background-color: #803D3B;   
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;   
+    z-index: 1000; 
+    border: solid 2px #000;
+    flex-direction: row;
+}
+.itemInfo.active {
+    display: flex;
+}
+
+.infoPics{
+    width: 40%;
+    margin: 1%;
+    border-radius: 20px;
+    border: solid 3px black;
+}
+
+.itemDescriptionName {
+    font-family: 'Times New Roman';
+    color: #E4C59E; 
+    align-self: center;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px black;
+    text-decoration: underline;
+    margin-left: 2%;
+}
+.itemDescriptionText {
+    font-family: Georgia;
+    color: #E4C59E;
+    font-size: 20px;
+    width: 81%;
+    margin-top: 0;
+    margin-left: 2%;
+    margin-top: 5%;
+    text-shadow: 4px 4px 4px black;
+}
+.closeButton{
+    background: none;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    line-height: 1;
+    color: #322C2B;
+}
 
 
 @media only screen and (max-width: 1024px) {
@@ -418,5 +476,24 @@ label[for="quantities"] {
     .inputSelection textarea[name="specialRequests"] {
     width: 80%;
     height: 120px;
+    }
+    .itemInfo{
+        flex-direction: column;
+        max-height: fit-content;
+    }
+    .infoPics{
+    width: 70%;
+    align-self: center;
+    border-radius: 20px;
+    border: solid 2px black;
+    margin-top: 5%;
+    }
+    .itemDescriptionName{
+        font-size: 15px;
+        margin-top: 10%;
+    }
+    .itemDescriptionText{
+        font-size: 10px;
+        margin-bottom: 5%;
     }
 }
