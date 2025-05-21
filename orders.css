@@ -298,7 +298,9 @@ body {
     border-radius: 20px;
     cursor: pointer;
     font-family: Georgia;
+    -webkit-tap-highlight-color: transparent;
 }
+
 
 .viewButton:hover{
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
@@ -480,6 +482,7 @@ label[for="quantities"] {
     .itemInfo{
         flex-direction: column;
         max-height: fit-content;
+        align-items: center;
     }
     .infoPics{
     width: 70%;
@@ -488,12 +491,18 @@ label[for="quantities"] {
     border: solid 2px black;
     margin-top: 5%;
     }
+    .itemDescription {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
     .itemDescriptionName{
         font-size: 15px;
-        margin-top: 10%;
+        margin-top: 5%;
     }
     .itemDescriptionText{
         font-size: 10px;
         margin-bottom: 5%;
+        margin-top: 0;
     }
 }
