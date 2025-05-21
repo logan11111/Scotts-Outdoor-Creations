@@ -61,8 +61,7 @@ body {
 
 .pic {
     width: 28%; /* Set a fixed width, allowing height to adjust */
-    height: auto; /* Allow height to adjust based on the .item content */
-    align-self: stretch; /* Ensure it stretches to match .item height */
+    height: auto; 
     border-style: solid;
     border-color: #E4C59E;
     margin-left: 1%;
@@ -94,10 +93,11 @@ body {
 
 .itemName {
     font-family: 'Times New Roman';
-    color: #AF8260; 
+    color: #E4C59E; 
     align-self: center;
     font-size: 30px;
-    text-shadow: 4px 4px 4px black;
+    text-shadow: 2px 2px 2px black;
+    text-decoration: underline;
 }
 .homeButton {
     position: absolute;
@@ -124,8 +124,11 @@ body {
 @media only screen and (max-width: 1024px) {
 
     .fullItem {
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
+
     .TitleCreations {
         font-size: 25px; /* Adjust font size */
         margin-top: 20px; /* Add top margin */
@@ -134,20 +137,22 @@ body {
     }
     .item {
         flex-direction: row; /* Stack items vertically on mobile */
-        margin-right: 5%; /* Remove right margin */
-        margin-left: 5%; /* Remove left margin */
+        margin-right: 5%; 
+        margin-left: 5%;
         margin-bottom: 3%;
+        margin-top: 0;
         border-radius: 0;
         padding-bottom: 2%;
-        width: 80%;
+        width: 90%;
         max-width: 700px;
         align-self: center;
+        height: auto;
     }
     .pic {
         height: 70%;
-        width: 80%; /* Reduce width for better fit */ /* Maintain aspect ratio */
-        margin-left: 1%; /* Center image */
+        width: 90%; /* Reduce width for better fit */ 
         align-self: center;
+        margin-left: 0;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         border-top-right-radius: 30%;
@@ -155,6 +160,8 @@ body {
         max-width: 700px;
         border-right: solid;
         border-right-color: #E4C59E;
+        margin-bottom: 0;
+        border-bottom: 0;
     }
     .textfield {
         width: 100%; /* Full width */
@@ -168,15 +175,14 @@ body {
         width: 75%;
         margin-top: 3%;
         margin-right: 5%;
-        align-self: center;
+        margin-left: 7%;
+        align-self: flex-start;
     }
     .itemName {
-        margin: 4% 2% 4% 0%;
-        font-size: 16px;
-    }
-    .item {
-        margin-top: 4%;
-        height: auto;
+        margin: 4% 2% 4% 7%;
+        font-size: 20px;
+        align-self: flex-start;
+        text-shadow: 1px 1px 1px black;
     }
     .homeButton {
         right: 2%;
