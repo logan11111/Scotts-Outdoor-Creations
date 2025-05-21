@@ -97,7 +97,8 @@ body {
     color: black;
     font-weight: bold;
     font-size: 20px;
-    margin-top: 2%;
+    margin-top: 4%;
+    align-self: flex-start;
 }
 
 .itemChoice:hover {
@@ -276,14 +277,32 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
 }
 .price {
     font-family: Georgia;
-    margin-top: 15%;
+    margin-top: 10%;
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 12%;
+    margin-bottom: 5%;
 }
+
+.viewButton{
+    margin-bottom: 5%;
+    margin-top: 5%;
+    background-color: #792422;
+    width: 50%;
+    color: #E4C59E;
+    height: 12%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.viewButton:hover{
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
+    background-color: #803D3B;
+}
+
 label[for="quantities"] {
     font-family: Georgia;
     font-weight: bold;
@@ -291,6 +310,7 @@ label[for="quantities"] {
 }
 #quantities {
     margin-right: 5%;
+    height: 10%;
 }
 
 
@@ -370,6 +390,7 @@ label[for="quantities"] {
     }
     .itemChoiceHeader{
         font-size: 16px;
+        margin-top: 2%;
     }
     .selectionText{
         margin-bottom: 2%;
@@ -380,9 +401,15 @@ label[for="quantities"] {
     }
     .price {
         font-size: 16px;
+        margin-top: 3%;
+        margin-bottom: 3%;
     }
     label[for="quantities"] {
         font-size: 16px;
+    }
+    #quantities {
+    margin-right: 5%;
+    height: 7%;
     }
     .inputSelection input[name="email"] {
     padding-right: 30%;
