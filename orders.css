@@ -290,17 +290,18 @@ body {
 .viewButton{
     margin-bottom: 5%;
     margin-top: 5%;
-    background-color: #792422;
+    background-color: #803D3B;
     width: 50%;
     color: #E4C59E;
     height: 12%;
     border-radius: 20px;
     cursor: pointer;
+    font-family: Georgia;
 }
 
 .viewButton:hover{
     box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
-    background-color: #803D3B;
+    background-color: #792422;
 }
 
 label[for="quantities"] {
