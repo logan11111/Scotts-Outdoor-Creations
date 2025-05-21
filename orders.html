@@ -274,7 +274,7 @@
                 </div>
                 <div class="inputSelection">
                     <label class="selectionTextBottom">*Phone Number:</label>
-                    <input type="tel" name="phoneNumber" class="inputText" placeholder="Phone Number" required>
+                    <input type="tel" name="phoneNumber" class="inputText" placeholder="Phone Number" required pattern="[\d\s\-\(\)]{10,}" title="Please enter a valid phone number with at least 10 digits.">
                 </div>
                 <div class="inputSelection">
                     <label class="selectionTextBottom">*Email:</label>
@@ -324,6 +324,7 @@
                     });
                     return valid;
                 }
+
                 const form = document.querySelector('#orderForm');
                 const placeOrderButton = document.querySelector('.placeButton');
                 const confirmationPopup = document.getElementById('confirmationPopup');
