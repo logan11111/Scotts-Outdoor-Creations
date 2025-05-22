@@ -297,29 +297,42 @@ body {
 }
 .price {
     font-family: Georgia;
-    margin-top: 10%;
+    margin-top: 5%;
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 5%;
 }
 
-.viewButton{
-    margin-bottom: 5%;
-    margin-top: 5%;
+.viewButton {
+    margin: 3% auto;
+    margin-left: 0;
     background-color: #803D3B;
-    width: 50%;
+    width: 80%;
+    height: 50px;
     color: #E4C59E;
-    height: 12%;
     border-radius: 20px;
     cursor: pointer;
-    font-family: Georgia;
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 
+.viewButton:hover,
+.viewButton:focus {
+    background-color: #a44a47;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+    transform: scale(1.03);
+    outline: none;
+}
 
-.viewButton:hover{
-    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
-    background-color: #792422;
+.viewButton:active {
+    background-color: #6d2f2d;
+    transform: scale(0.96);
 }
 
 label[for="quantities"] {
@@ -507,5 +520,9 @@ label[for="quantities"] {
         font-size: 10px;
         margin-bottom: 5%;
         margin-top: 0;
+    }
+    .viewButton {
+        width: 80%;
+        height: 30px;
     }
 }
