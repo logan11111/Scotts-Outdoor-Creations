@@ -62,6 +62,21 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+.closeItem {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closeItem:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .popup-buttons {
     text-align: right;
@@ -324,7 +339,7 @@ label[for="quantities"] {
     transform: translate(-50%, -50%); 
     width: 80%;             
     height: 80%;              
-    background-color: #803D3B;   
+    background-color: #322C2B;   
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
     border-radius: 10px;   
     z-index: 1000; 
@@ -360,18 +375,6 @@ label[for="quantities"] {
     margin-left: 2%;
     margin-top: 5%;
     text-shadow: 4px 4px 4px black;
-}
-.closeButton{
-    background: none;
-    border: none;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    line-height: 1;
-    color: #322C2B;
 }
 
 
