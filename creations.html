@@ -111,7 +111,36 @@
         });
         </script>
 
+        <!--Intro section for creation page-->
+        <div class="explanation">
+            <p class="introParagraph"> 
+                Thank you for taking the time to look at what I make! Feel free to filter based on what you're looking for and click 
+                on 'View item info' in order to see a more detailed description of the items and multiple images.
+            </p>
+        </div>
+
+        <!--filter by type section-->
+        <h2 class="filterTitle">Filter</h2>
+        <div class="filterForm">  
+            <div class="checkbox">
+                <input type="checkbox" id="allCheckbox" checked >
+                <label for="allCheckbox" class="checkboxLabel">All</label>
+            </div>      
+            <div class="checkbox">
+                <input type="checkbox" id="seatingCheckbox">
+                <label for="seatingCheckbox" class="checkboxLabel">Seating</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="tablesCheckbox">
+                <label for="tablesCheckbox" class="checkboxLabel">Tables</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="plantersCheckbox">
+                <label for="plantersCheckbox" class="checkboxLabel">Planters</label>
+            </div>
+        </div>
         <button type="button" class="placeButton" onclick="goToPage()">Place Order! &#8658;</button>
+
         <!--script for place order button-->
         <script>
         function goToPage() {
