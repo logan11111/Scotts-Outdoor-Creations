@@ -223,17 +223,13 @@ body {
     flex-direction: column;
     align-items: flex-start; 
 }
-
-.selectionText, .selectionTextBottom {
+.selectionTextBottom {
     font-family: Georgia;
     color: #E4C59E;
     font-size: 20px;
     margin-left: 1%;
     margin-right: 2%;
     text-shadow: 4px 4px 4px black;
-}
-.selectionText{
-    margin-top: 1%;
 }
 .selectionTextBottom {
     padding-bottom: 1%;
@@ -395,6 +391,40 @@ label[for="quantities"] {
     margin-top: 5%;
     text-shadow: 4px 4px 4px black;
 }
+.filterTitle, .selectionText{
+    font-family: 'Times New Roman';
+    color: #E4C59E;
+    font-size: 40px;
+    margin: 0;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    text-shadow: 0px 4px 10px black;
+}
+.filterForm{
+    display: flex;
+    flex-direction: row;
+}
+.checkboxLabel{
+    font-family: Georgia;
+    color: #E4C59E;
+    font-size: 20px;
+    width: 81%;
+    margin-top: 0;
+    margin-top: 5%;
+    text-shadow: 4px 4px 4px black;
+}
+.checkbox{
+    margin-bottom: 1%;
+    margin-left: 3%;
+}
+input[type="checkbox"] {
+  accent-color: #AF8260; 
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
 
 
 @media only screen and (max-width: 1024px) {
@@ -434,7 +464,7 @@ label[for="quantities"] {
         font-size: 14px;
         margin-left: 1%;
     }
-    .selectionText, .selectionTextBottom {
+    .selectionTextBottom {
         color: #E4C59E;
         font-size: 16px;
         margin-left: 2%;
@@ -479,9 +509,6 @@ label[for="quantities"] {
     .itemChoiceHeader{
         font-size: 16px;
         margin-top: 2%;
-    }
-    .selectionText{
-        margin-bottom: 2%;
     }
     .pic{
         max-width: 130px;
@@ -535,5 +562,20 @@ label[for="quantities"] {
     .viewButton {
         width: 80%;
         height: 30px;
+    }
+    .filterTitle, .selectionText{
+        font-size: 20px;
+        margin-left: 3%;
+    }
+    .checkboxLabel{
+    font-size: 15px;
+    }
+    .checkbox{
+        margin-bottom: 1%;
+        margin-left: 4%;
+    }
+    input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
     }
 }
