@@ -259,7 +259,7 @@
         <!--all items available for order-->
         <hr style="border-color: #E4C59E;">
 
-                <!--filter by type section-->
+            <!--filter by type section-->
         <h2 class="filterTitle">Filter</h2>
         <div class="filterForm">  
             <div class="checkbox">
@@ -393,45 +393,53 @@
 
         <hr style="border-color: #E4C59E;">
 
-                <!--script for sliding images-->
+        <!--script for sliding images-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
-            let swiper;
-            document.getElementById('viewButton1').addEventListener('click', () => {
-            const swiperContainer = document.querySelector('.swiper');
-            swiperContainer.style.display = 'block'; // show container
+            const swipers = {}; // store swiper instances by target id
 
-            // Wait a tick to let images load and styles apply
-            setTimeout(() => {
-                if (!swiper) {
-                swiper = new Swiper('.swiper', {
-                    direction: 'horizontal',
-                    loop: true,
-                    autoplay: {
-                    delay: 2000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: false,
-                    },
-                    pagination: {
-                    el: '.swiper-pagination',
-                    },
-                    navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                    },
-                    slidesPerView: 1,
+            document.querySelectorAll('.viewButton').forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-target');
+                    const swiperContainer = document.querySelector(`#${targetId} .swiper`);
+
+                    if (!swiperContainer) {
+                        console.error('Swiper container not found for:', targetId);
+                        return;
+                    }
+
+                    swiperContainer.style.display = 'block'; // show container
+
+                    setTimeout(() => {
+                        if (!swipers[targetId]) {
+                            swipers[targetId] = new Swiper(`#${targetId} .swiper`, {
+                                direction: 'horizontal',
+                                loop: true,
+                                autoplay: {
+                                    delay: 2000,
+                                    disableOnInteraction: false,
+                                    pauseOnMouseEnter: false,
+                                },
+                                pagination: {
+                                    el: `#${targetId} .swiper-pagination`,
+                                },
+                                navigation: {
+                                    nextEl: `#${targetId} .swiper-button-next`,
+                                    prevEl: `#${targetId} .swiper-button-prev`,
+                                },
+                                slidesPerView: 1,
+                            });
+                        } else {
+                            swipers[targetId].update();
+                        }
+
+                        if (swipers[targetId].autoplay && typeof swipers[targetId].autoplay.start === 'function') {
+                            swipers[targetId].autoplay.start();
+                        }
+                    }, 100);
                 });
-                } else {
-                swiper.update();
-                }
-
-                if (swiper.autoplay && typeof swiper.autoplay.start === 'function') {
-                    swiper.autoplay.start();
-                }
-            }, 100);  // 100ms delay to allow rendering/images to load
             });
         </script>
-
 
         <!--second info text-->
         </div>
