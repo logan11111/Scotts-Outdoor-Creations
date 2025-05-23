@@ -46,6 +46,7 @@ body {
 .CreationsButton, .OrderButton, .AboutButton {
     background-color: #803D3B;
     border-radius: 25px;
+    border-color: #322C2B;
     height: 80px;
     flex: 1; /* Makes each button take up an equal amount of space */
     font-size: 30px;
@@ -74,6 +75,7 @@ body {
     margin-left: 1%;
     margin-top: 1%;
     text-shadow: 0px 4px 10px black;
+    text-align: center;
 }
 
 .homeButtons {
