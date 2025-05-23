@@ -394,6 +394,49 @@
 
         <hr style="border-color: #E4C59E;">
 
+        <!--second info text-->
+        </div>
+        <div class="explanationTwo">
+            <p class="introParagraphTwo"> 
+            My guarantee to you is that I commit to creating the best product that I can and will warranty deficiencies in my work for one year from the date of pick up. 
+            Timeframe from order to pick-up will depend on demand at the time and I will be transparent with you about timing from the start.  
+            Payment options are: Etransfers,Cash or money orders only. No cheques will be accepted for payment.                  
+            </p>
+        </div>
+
+        <!--formspree template to email Scott information-->
+        <form id="orderForm" action="https://formspree.io/f/xvgpaevl" method="post">
+            <div class="endingInfo">
+                <div class="inputSelection">
+                    <label class="selectionTextBottom">*First Name:</label>
+                    <input type="text" name="firstName" class="inputText" placeholder="First Name" required>
+                </div>
+                <div class="inputSelection">
+                    <label class="selectionTextBottom">*Last Name:</label>
+                    <input type="text" name="lastName" class="inputText" placeholder="Last Name" required>
+                </div>
+                <div class="inputSelection">
+                    <label class="selectionTextBottom">*Phone Number:</label>
+                    <input type="tel" name="phoneNumber" class="inputText" placeholder="Phone Number" required pattern="[\d\s\-\(\)]{10,}" title="Please enter a valid phone number with at least 10 digits.">
+                </div>
+                <div class="inputSelection">
+                    <label class="selectionTextBottom">*Email:</label>
+                    <input type="email" name="email" class="inputText" placeholder="Email" required>
+                </div>
+                <div class="inputSelection">
+                    <label class="selectionTextBottom">Special Requests:</label>
+                    <textarea name="specialRequests" class="inputText" placeholder="Please be specific with any special requests, field not required"></textarea>
+                </div>
+            </div> 
+            <!-- Hidden fields for order details and grand total -->
+            <input type="hidden" id="hiddenOrderDetails" name="orderDetails">
+            <input type="hidden" id="hiddenGrandTotal" name="grandTotal">
+            <button type="submit" class="placeButton">Place Order! &#8658;</button>
+        </form>
+        <button class="homeButton" onclick="location.href='index.html'">&#8656; HOME</button>
+
+        <!--all scripts-->
+
         <!--script for sliding images-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
@@ -442,46 +485,6 @@
             });
         </script>
 
-        <!--second info text-->
-        </div>
-        <div class="explanationTwo">
-            <p class="introParagraphTwo"> 
-            My guarantee to you is that I commit to creating the best product that I can and will warranty deficiencies in my work for one year from the date of pick up. 
-            Timeframe from order to pick-up will depend on demand at the time and I will be transparent with you about timing from the start.  
-            Payment options are: Etransfers,Cash or money orders only. No cheques will be accepted for payment.                  
-            </p>
-        </div>
-
-        <!--formspree template to email Scott information-->
-        <form id="orderForm" action="https://formspree.io/f/xvgpaevl" method="post">
-            <div class="endingInfo">
-                <div class="inputSelection">
-                    <label class="selectionTextBottom">*First Name:</label>
-                    <input type="text" name="firstName" class="inputText" placeholder="First Name" required>
-                </div>
-                <div class="inputSelection">
-                    <label class="selectionTextBottom">*Last Name:</label>
-                    <input type="text" name="lastName" class="inputText" placeholder="Last Name" required>
-                </div>
-                <div class="inputSelection">
-                    <label class="selectionTextBottom">*Phone Number:</label>
-                    <input type="tel" name="phoneNumber" class="inputText" placeholder="Phone Number" required pattern="[\d\s\-\(\)]{10,}" title="Please enter a valid phone number with at least 10 digits.">
-                </div>
-                <div class="inputSelection">
-                    <label class="selectionTextBottom">*Email:</label>
-                    <input type="email" name="email" class="inputText" placeholder="Email" required>
-                </div>
-                <div class="inputSelection">
-                    <label class="selectionTextBottom">Special Requests:</label>
-                    <textarea name="specialRequests" class="inputText" placeholder="Please be specific with any special requests, field not required"></textarea>
-                </div>
-            </div> 
-            <!-- Hidden fields for order details and grand total -->
-            <input type="hidden" id="hiddenOrderDetails" name="orderDetails">
-            <input type="hidden" id="hiddenGrandTotal" name="grandTotal">
-            <button type="submit" class="placeButton">Place Order! &#8658;</button>
-        </form>
-        <button class="homeButton" onclick="location.href='index.html'">&#8656; HOME</button>
 
         <!--script for the order-->
         <script>

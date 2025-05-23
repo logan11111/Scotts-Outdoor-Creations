@@ -195,34 +195,6 @@
             <span class="closeItem">&times;</span>
         </div>
 
-        <!--script for popping up item info-->
-        <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.viewButton').forEach(button => {
-                button.addEventListener('click', () => {
-                    const target = document.getElementById(button.dataset.target);
-                    target.classList.add('active');
-                    document.getElementById('overlay').style.display = 'block';
-                });
-            });
-
-            document.querySelectorAll('.closeItem').forEach(button => {
-                button.addEventListener('click', () => {
-                    button.closest('.itemInfo').classList.remove('active');
-                    document.getElementById('overlay').style.display = 'none';
-
-                });
-            });
-            document.addEventListener('click', (e) => {
-            const popup = document.querySelector('.itemInfo.active');
-            if (popup && !popup.contains(e.target) && !e.target.classList.contains('viewButton')) {
-                popup.classList.remove('active');
-                document.getElementById('overlay').style.display = 'none';
-
-                }
-            });  
-        });
-        </script>
 
         <!--Intro section for creation page-->
         <div class="explanation">
@@ -254,13 +226,6 @@
         </div>
         
         <button type="button" class="placeButton" onclick="goToPage()">Place Order! &#8658;</button>
-
-        <!--script for place order button-->
-        <script>
-        function goToPage() {
-            window.location.href = "orders.html"; 
-        }
-        </script>
 
 
         <!--all items available for order-->
@@ -325,6 +290,43 @@
                 </div>
             </div>
         </div>
+        <!--all scripts-->
+
+        <!--script for popping up item info-->
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.viewButton').forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = document.getElementById(button.dataset.target);
+                    target.classList.add('active');
+                    document.getElementById('overlay').style.display = 'block';
+                });
+            });
+
+            document.querySelectorAll('.closeItem').forEach(button => {
+                button.addEventListener('click', () => {
+                    button.closest('.itemInfo').classList.remove('active');
+                    document.getElementById('overlay').style.display = 'none';
+
+                });
+            });
+            document.addEventListener('click', (e) => {
+            const popup = document.querySelector('.itemInfo.active');
+            if (popup && !popup.contains(e.target) && !e.target.classList.contains('viewButton')) {
+                popup.classList.remove('active');
+                document.getElementById('overlay').style.display = 'none';
+
+                }
+            });  
+        });
+        </script>
+
+        <!--script for place order button-->
+        <script>
+        function goToPage() {
+            window.location.href = "orders.html"; 
+        }
+        </script>
 
         <!--script for sliding images-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
