@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scott's Outdoor Creations</title>
+        <link href="https://fonts.googleapis.com/css?family=Grape+Nuts" rel="stylesheet">
+        <link rel="stylesheet" href="trial.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    </head>
+    <body>
+        <h1 class="Title">SCOTT'S OUTDOOR CREATIONS</h1>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" data-swiper-autoplay="2000">
+                <img class="infoPics" src="pictures/AchairFront.jpg">
+            </div>
+            <div class="swiper-slide" data-swiper-autoplay="2000">
+                <img class="infoPics" src="pictures/AchairFront2.jpg">
+            </div>
+        </div>
+
+
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+        const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',  // or 'horizontal'
+        loop: true,
+        autoplay: {
+            delay: 2000, // time between slides in ms
+            disableOnInteraction: false, // keeps autoplay running after user interaction
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+
+        </script>
+        
+    </body>
+</html>

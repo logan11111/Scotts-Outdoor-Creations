@@ -362,16 +362,10 @@ label[for="quantities"] {
     z-index: 1000; 
     border: solid 2px #000;
     flex-direction: row;
+    padding-left: 2%;
 }
 .itemInfo.active {
     display: flex;
-}
-
-.infoPics{
-    width: 40%;
-    margin: 1%;
-    border-radius: 20px;
-    border: solid 3px black;
 }
 
 .itemDescriptionName {
@@ -382,6 +376,7 @@ label[for="quantities"] {
     text-shadow: 2px 2px 2px black;
     text-decoration: underline;
     margin-left: 2%;
+    margin-top: 3%;
 }
 .itemDescriptionText {
     font-family: Georgia;
@@ -392,6 +387,9 @@ label[for="quantities"] {
     margin-left: 2%;
     margin-top: 5%;
     text-shadow: 4px 4px 4px black;
+}
+.itemDescription{
+    padding-left: 3%;
 }
 .filterTitle, .selectionText{
     font-family: 'Times New Roman';
@@ -426,6 +424,27 @@ input[type="checkbox"] {
   cursor: pointer;
   width: 20px;
   height: 20px;
+}
+.swiper-slide{
+    width: 100%;
+    height: 100%;
+    background-color: #E4C59E;
+}
+.swiper {
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    border-radius: 2%;
+    border: solid 2px black;
+    height: auto; /* remove any fixed height */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 
@@ -539,14 +558,9 @@ input[type="checkbox"] {
         flex-direction: column;
         height:auto;
         align-items: center;
+        padding: 0;
     }
-    .infoPics{
-    width: 70%;
-    align-self: center;
-    border-radius: 20px;
-    border: solid 2px black;
-    margin-top: 5%;
-    }
+
     .itemDescription {
         display: flex;
         align-items: center;
@@ -580,4 +594,33 @@ input[type="checkbox"] {
         width: 15px;
         height: 15px;
     }
+    .swiper-slide{
+    width: 100%;
+    height: 100%;
+    background-color: #E4C59E;
+    }
+    .swiper {
+        width: 80%;
+        max-width: 300px;
+        overflow: hidden;
+        border-radius: 2%;
+        border: solid 2px black;
+        height: auto; /* remove any fixed height */
+        background-color: #E4C59E;
+        margin: 0;
+        padding: 0;
+        margin-top: 2%;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        margin: 0;
+
+    }
+    .closeItem {
+    top: 5px;
+    right: 5px;
+    }          
 }
