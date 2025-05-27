@@ -403,18 +403,6 @@
                     ) {
                         allCheckbox.checked = true;
                     }
-
-                    // change to all if all checkboxes are marked
-                    if (
-                        seatingCheckbox.checked &&
-                        tablesCheckbox.checked &&
-                        plantersCheckbox.checked
-                    ) {
-                        allCheckbox.checked = true;
-                        seatingCheckbox.checked = false;
-                        tablesCheckbox.checked = false;
-                        plantersCheckbox.checked = false;
-                    }
                     
                     updateVisibility();
                 });
@@ -430,6 +418,36 @@
                 if (!allCheckbox.checked && !seatingCheckbox.checked && !tablesCheckbox.checked && !plantersCheckbox.checked) {
                     allCheckbox.checked = true;
                 }
+                updateVisibility();
+            });
+
+            // if "seating" is checked, uncheck all other boxes
+            seatingCheckbox.addEventListener('change', () => {
+                // set all other checks to false
+                allCheckbox.checked = false;
+                tablesCheckbox.checked = false;
+                plantersCheckbox.checked = false;
+
+                updateVisibility();
+            });
+
+            // if "planters" is checked, uncheck all other boxes
+            plantersCheckbox.addEventListener('change', () => {
+                // set all other checks to false
+                allCheckbox.checked = false;
+                tablesCheckbox.checked = false;
+                seatingCheckbox.checked = false;
+
+                updateVisibility();
+            });
+
+            // if "tables" is checked, uncheck all other boxes
+            tablesCheckbox.addEventListener('change', () => {
+                // set all other checks to false
+                allCheckbox.checked = false;
+                seatingCheckbox.checked = false;
+                plantersCheckbox.checked = false;
+
                 updateVisibility();
             });
 
