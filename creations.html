@@ -232,7 +232,7 @@
         <hr style="border-color: #E4C59E;">
         <div class="orderArea">
             <div class="selection">
-                <div class="itemChoice">
+                <div class="itemChoice" data-type="orderChairs">
                     <img class="pic" src="pictures/AchairFront.jpg">
                     <div class="description"> 
                         <a class="itemChoiceHeader">FULL SIZE ADIRONDACK CHAIR</a>
@@ -240,7 +240,7 @@
                         <button class="viewButton" data-target="item1">View item info</button>
                     </div>
                 </div>
-                <div class="itemChoice">
+                <div class="itemChoice" data-type="orderChairs">
                     <img class="pic" src="pictures/smallchairfront.jpg">
                     <div class="description">
                         <a class="itemChoiceHeader">SMALL ADIRONDACK CHAIR</a>
@@ -248,7 +248,7 @@
                         <button class="viewButton" data-target="item2">View item info</button>
                     </div>
                 </div>
-                <div class="itemChoice">
+                <div class="itemChoice" data-type="orderChairs">
                     <img class="pic" src="pictures/AchairSetFront.jpg">
                     <div class="description"> 
                         <a class="itemChoiceHeader">ADIRONDACK CHAIR SET</a>
@@ -256,7 +256,7 @@
                         <button class="viewButton" data-target="item3">View item info</button>
                     </div>
                 </div>
-                <div class="itemChoice">
+                <div class="itemChoice" data-type="orderPlanters">
                     <img class="pic" src="pictures/planterFront.jpg">
                     <div class="description">
                         <a class="itemChoiceHeader">THREE TIER PLANTER</a>
@@ -264,7 +264,7 @@
                         <button class="viewButton" data-target="item4">View item info</button>
                     </div>
                 </div>
-                <div class="itemChoice">
+                <div class="itemChoice" data-type="orderChairs">
                     <img class="pic" src="pictures/RockerSide.jpg">
                     <div class="description">
                         <a class="itemChoiceHeader">ADIRONDACK ROCKER</a>
@@ -272,7 +272,7 @@
                         <button class="viewButton" data-target="item5">View item info</button>
                     </div>
                 </div>
-                <div class="itemChoice">
+                <div class="itemChoice" data-type="orderTables">
                     <img class="pic" src="pictures/coffeeTable2.jpg">
                     <div class="description">
                         <a class="itemChoiceHeader">COFFEE TABLE</a>
@@ -280,7 +280,7 @@
                         <button class="viewButton" data-target="item6">View item info</button>
                     </div>
                 </div>
-                <div class="itemChoice">
+                <div class="itemChoice" data-type="orderTables">
                     <img class="pic" src="pictures/endTable2.jpg">
                     <div class="description">
                         <a class="itemChoiceHeader">END TABLE</a>
@@ -374,6 +374,93 @@
                     }, 100);
                 });
             });
+        </script>
+
+        <!--script for filtering checkboxes-->
+        <script>
+            // Get checkbox elements
+            const allCheckbox = document.getElementById('allCheckbox');
+            const seatingCheckbox = document.getElementById('seatingCheckbox');
+            const tablesCheckbox = document.getElementById('tablesCheckbox');
+            const plantersCheckbox = document.getElementById('plantersCheckbox');
+
+            const orderChairs = document.querySelectorAll('[data-type="orderChairs"]');
+            const orderTables = document.querySelectorAll('[data-type="orderTables"]');
+            const orderPlanters = document.querySelectorAll('[data-type="orderPlanters"]');
+
+            // Add event listeners to individual checkboxes
+            [seatingCheckbox, tablesCheckbox, plantersCheckbox].forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    if (checkbox.checked) {
+                        allCheckbox.checked = false;
+                    }
+
+                    // if none are checked, re-check "All"
+                    if (
+                        !seatingCheckbox.checked &&
+                        !tablesCheckbox.checked &&
+                        !plantersCheckbox.checked
+                    ) {
+                        allCheckbox.checked = true;
+                    }
+
+                    // change to all if all checkboxes are marked
+                    if (
+                        seatingCheckbox.checked &&
+                        tablesCheckbox.checked &&
+                        plantersCheckbox.checked
+                    ) {
+                        allCheckbox.checked = true;
+                        seatingCheckbox.checked = false;
+                        tablesCheckbox.checked = false;
+                        plantersCheckbox.checked = false;
+                    }
+                    
+                    updateVisibility();
+                });
+            });
+
+            // if "All" is checked, uncheck all other boxes
+            allCheckbox.addEventListener('change', () => {
+                // set all other checks to false
+                seatingCheckbox.checked = false;
+                tablesCheckbox.checked = false;
+                plantersCheckbox.checked = false;
+
+                if (!allCheckbox.checked && !seatingCheckbox.checked && !tablesCheckbox.checked && !plantersCheckbox.checked) {
+                    allCheckbox.checked = true;
+                }
+                updateVisibility();
+            });
+
+            function updateVisibility() {
+                // Show chairs if All OR Seating is checked
+                orderChairs.forEach(item => {
+                    if (allCheckbox.checked || seatingCheckbox.checked) {
+                        item.style.display = 'flex'; 
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // show tables if ALL or Tables is checked
+                orderTables.forEach(item => {
+                    if (allCheckbox.checked || tablesCheckbox.checked) {
+                        item.style.display = 'flex'; 
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // show planters if ALL or Planters is checked
+                orderPlanters.forEach(item => {
+                    if (allCheckbox.checked || plantersCheckbox.checked) {
+                        item.style.display = 'flex'; 
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
         </script>
     </body>
 </html>
