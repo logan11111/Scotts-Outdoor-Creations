@@ -643,6 +643,16 @@
                 if (!allCheckbox.checked && !seatingCheckbox.checked && !tablesCheckbox.checked && !plantersCheckbox.checked) {
                     allCheckbox.checked = true;
                 }
+
+                // if none are checked, re-check "All"
+                    if (
+                        !seatingCheckbox.checked &&
+                        !tablesCheckbox.checked &&
+                        !plantersCheckbox.checked
+                    ) {
+                        allCheckbox.checked = true;
+                    }
+
                 updateVisibility();
             });
 
@@ -652,6 +662,15 @@
                 allCheckbox.checked = false;
                 tablesCheckbox.checked = false;
                 plantersCheckbox.checked = false;
+
+                // if none are checked, re-check "All"
+                    if (
+                        !seatingCheckbox.checked &&
+                        !tablesCheckbox.checked &&
+                        !plantersCheckbox.checked
+                    ) {
+                        allCheckbox.checked = true;
+                    }
 
                 updateVisibility();
             });
@@ -663,6 +682,15 @@
                 tablesCheckbox.checked = false;
                 seatingCheckbox.checked = false;
 
+                // if none are checked, re-check "All"
+                    if (
+                        !seatingCheckbox.checked &&
+                        !tablesCheckbox.checked &&
+                        !plantersCheckbox.checked
+                    ) {
+                        allCheckbox.checked = true;
+                    }
+
                 updateVisibility();
             });
 
@@ -672,6 +700,15 @@
                 allCheckbox.checked = false;
                 seatingCheckbox.checked = false;
                 plantersCheckbox.checked = false;
+
+                // if none are checked, re-check "All"
+                    if (
+                        !seatingCheckbox.checked &&
+                        !tablesCheckbox.checked &&
+                        !plantersCheckbox.checked
+                    ) {
+                        allCheckbox.checked = true;
+                    }
 
                 updateVisibility();
             });
