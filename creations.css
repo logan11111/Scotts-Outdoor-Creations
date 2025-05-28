@@ -304,6 +304,12 @@ input[type="checkbox"] {
     height: 100%;
     object-fit: contain;
 }
+.swiper-button-next, .swiper-button-prev {
+    color: #E4C59E !important;
+    width: 40px !important;
+    height: 40px !important;
+    -webkit-tap-highlight-color: transparent;
+}
 
 @media only screen and (max-width: 1024px) {
     .homeButton {
@@ -425,7 +431,12 @@ input[type="checkbox"] {
     .closeItem {
     top: 5px;
     right: 5px;
-    }          
+    }  
+    
+    .swiper-button-next, .swiper-button-prev {
+        width: 15px !important;      /* size of the button container */
+        height: 15px !important;
+    }
 }
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (hover: none) and (pointer: coarse) {
