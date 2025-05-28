@@ -427,3 +427,59 @@ input[type="checkbox"] {
     right: 5px;
     }          
 }
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (hover: none) and (pointer: coarse) {
+  /* iPad styles */
+    .price{
+        margin-top: 1%;
+        margin-bottom: 1%;
+        font-size: 20px;
+    }
+    .viewButton{
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    .pic{
+        margin: 0.3%;
+        margin-right: 4%;
+    }
+
+    .TitleCreations{
+        font-size: 40px;
+    }
+    .homeButton{
+        font-size: 25px;
+    } 
+    .introParagraph, .introParagraphTwo {
+        font-size: 20px;
+    }
+    .selectionTextBottom {
+        font-size: 20px;
+    }
+    .placeButton{
+        font-size: 24px;
+    }
+    .inputTextRange {
+        font-size: 20px;
+    }
+
+    .inputText {
+        font-size: 20px;
+    }
+    .itemChoiceHeader{
+        font-size: 20px;
+    }
+    .itemDescriptionName{
+        font-size: 24px;
+    }
+    .itemDescriptionText{
+        font-size: 20px;
+    }
+    .filterTitle, .selectionText{
+        font-size: 24px;
+    }
+    .checkboxLabel{
+    font-size: 20px;
+    }
+
+}

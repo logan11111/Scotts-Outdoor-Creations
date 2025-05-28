@@ -151,3 +151,29 @@ body {
         overflow: auto;
     }
 }
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (hover: none) and (pointer: coarse) {
+    .swiper {
+        height: 100%;
+    }
+
+    .images img {
+        max-height: 350px; /* Adjust this value to fit your design */
+    }
+
+    .images {
+        margin-bottom: 10%; /* Adjust spacing below the image grid */
+    }
+
+    body {
+        overflow: auto; /* Allow scroll if content exceeds screen */
+    }
+    .CreationsButton, .OrderButton, .AboutButton {
+        height: auto;
+        width: 80%;
+        font-size: 30px; 
+        max-width: 70%;
+    }
+    .Title{
+        font-size: 40px;
+    }
+}

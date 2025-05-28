@@ -229,5 +229,38 @@ body {
     }
     .questionButton:hover{
     background-color: #AF8260;
+    }
 }
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (hover: none) and (pointer: coarse) {
+  /* iPad styles */
+
+
+    .TitleAbout{
+        font-size: 40px;
+    }
+    .homeButton{
+        font-size: 25px;
+    } 
+    .introParagraph, .introParagraphTwo {
+        font-size: 20px;
+    }
+    .selectionTextBottom {
+        font-size: 20px;
+    }
+    .introText{
+        font-size: 20px;
+    }
+    .introduction, .introImage{
+        max-width: 1000px;
+    }
+    .faqHead{
+        font-size: 30px;
+    }
+        .questionButton{
+        font-size: 24px;
+    }
+    .answerText {
+        font-size: 24px;
+    }
 }
