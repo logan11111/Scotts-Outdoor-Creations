@@ -5,17 +5,52 @@ body {
     background-color: #322C2B;
     margin: 0;
     overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 .Title {
     font-family: 'Times New Roman';
     color: #E4C59E;
-    font-size: 55px;
-    margin: 0;
-    margin-left: 1%;
-    margin-top: 1%;
+    font-size: 60px;
     text-shadow: 0px 4px 10px black;
+    margin-top: 12%;
 }
-
+.thankSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.thankMessage{
+    font-size: 30px;
+    color:#E4C59E;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-self: center;
+}
+.homeButton {
+    position: absolute;
+    top: 2.5%;
+    right: 1%;
+    background-color: #803D3B;
+    padding: 1% 1.5% 1% 1.5%;
+    border-radius: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #E4C59E;
+    font-family: 'Times New Roman';
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
+    -webkit-tap-highlight-color: transparent;
+    text-shadow: 4px 4px 4px black;
+    border-color: #322C2B;
+}
+.homeButton:hover {
+    box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 #AF8260;
+}
+.homeButton:active {
+    background-color: #792422;
+}
 @media only screen and (max-width: 1024px) {
     .Title {
         font-size: 32px; /* Adjust font size */
@@ -25,5 +60,29 @@ body {
     body{
         height: 80%;
         overflow: auto;
+    }
+    .homeButton {
+        right: 2%;
+        top: 20px;
+        font-size: 15px;
+    }
+    .homeButton:hover {
+        box-shadow: 0 8px 16px 0 rgb(48, 46, 46), 0 6px 20px 0 black;
+    }
+    .thankMessage{
+        font-size: 20px;
+        padding-left: 10%;
+    }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (hover: none) and (pointer: coarse) {
+  /* iPad styles */
+    .homeButton{
+        font-size: 25px;
+    } 
+    .Title{
+        font-size: 50px;
+    }
+    .thankMessage{
+        font-size: 30px;
     }
 }
